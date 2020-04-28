@@ -135,6 +135,7 @@ gpc() {
     git push -u origin master
 }
 # alias gp='git commit -a -m $1 && git push -u origin master'
+alias gpdc='git push -u dm custom'
 alias gpo='git push origin '
 alias gpom='git push -u origin master'
 alias gr='git rm -r '
