@@ -1,0 +1,1 @@
+/Users/dutchmichael/Documents/dotfiles/custom_alias.zsh

@@ -1,0 +1,262 @@
+# ~/.oh-my-zsh/custom/custom_alias.zsh
+# custom aliases for Oh My ZSH
+# Mike Van Voorhis
+# Version 20.04.27
+#
+# a quick way to get out of current directory, I can't recall where I came across this. ##
+alias ..='cd ..'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias .....='cd ../../../../'
+alias .4='cd ../../../../'
+alias .5='cd ../../../../../'
+
+# Alias greg command
+alias ag='alias | grep $1'
+alias agb='alias | grep brew'
+alias agg='alias | grep git'
+alias agga='alias | grep "git add"'
+alias aggc='alias | grep "git commit"'
+alias aggp='alias | grep "git push"'
+alias aggl='alias | grep "git pull"'
+alias aggs='alias | grep "git status"'
+
+# Apache commands
+alias act='atom apachectl configtest'
+alias eac='atom /usr/local/etc/httpd/httpd.conf'
+alias eca='atom ~/.oh-my-zsh/custom/custom_alias.zsh'
+
+# Application Commands
+alias al='ls /Applications > ~/Documents/dotfiles/applications.txt && ls /Applications'
+
+# Atom command
+alias atom=atom-beta
+alias apm=apm-beta
+
+# Bitbucket commands
+# Edited by dutchmichael 200301
+# curl -X POST -u "client_id:secret" \ https://bitbucket.org/site/oauth2/access_token \ -d grant_type=authorization_code -d code={code}
+# startbitbucket - creates remote bitbucket repo in current directory and adds it as git remote to current working directory
+# alias startbitbucket="curl --user dutchmichael:M1dAp3x4274 https://api.bitbucket.org/1.0/repositoties/ --data name=${PWD##*/} --data is_private='true' && git remote add origin git@bitbucket.org:dutchmichael/${PWD##*/}.git && git push -u origin --all && git push -u origin --tags"
+alias startbitbucket='curl --user dutchmichael:M1dAp3x4274 https://api.bitbucket.org/2.0/repositories/ --data name=${PWD##*/} --data is_private='true' && git remote add origin git@bitbucket.org:dutchmichael/${PWD##*/}.git && git push -u origin --all && git push -u origin --tags'
+alias sbb='curl --user dutchmichael:M1dAp3x4274 https://api.bitbucket.org/2.0/repositories/ --data name=${PWD##*/} --data is_private='true' && git remote add origin git@bitbucket.org:dutchmichael/${PWD##*/}.git && git push -u origin --all && git push -u origin --tags'
+# Working Note for startbitbucket
+# Changed origin to bitbucket because origin already exists within Trellis and Bedrock
+# curl -k -X POST --user username:password "https://api.bitbucket.org/1.0/repositories" -d "name=$1&is_private=true"
+# curl --user buserbb:2934dfad https://api.bitbucket.org/1.0/user/repositories
+# curl --user dutchmichael:M1dAp3x4274 https://api.bitbucket.org/1.0/repositories/ \ --data name=deliverwp
+# 8/25/19 changed API version 1.0 to 2.0
+
+# Change directory commands
+alias cdh='cd ~/ && ls -la && echo "You are in your home directory"'
+alias cdn='cd ~/.nodenv && ls -la'
+alias cds='cd ~/Sites && ls -la'
+alias cddg='cd ~/Sites/dutchmichael.github.io && ls -la'
+alias cdm='cd ~/Sites/middleman && ls -la'
+alias cdulb='cd /usr/local/bin && ls -la'
+# alias cdt='cd ~/Projects/Roots.io/trellis'
+
+# Clear screen command
+alias c='clear'
+
+# DNSmasq configuration command
+alias edc='atom /usr/local/etc/dnsmasq.conf'
+# DNS on localhost dnsmasq commands
+# alias # stopdns='sudo launchctl stop homebrew.mxcl.dnsmasq'
+# alias # startdns='sudo launchctl start homebrew.mxcl.dnsmasq'
+
+# find file command
+alias ff="find ~/ -type f -name "
+
+# Flush cache command
+alias fc='sudo killall -HUP mDNSResponder'
+# The following was for older MacOS <10.11
+# alias fc='sudo dscacheutil -flushcache'
+# sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;say cache flushed
+# -flushcache
+# 		Flushes the entire cache.  This should only be used in extrem#e
+#		cases.  Validation information is used within the cache along
+#		with other techniques to ensure the OS has valid information
+#		available to it.
+
+# Generate a DES3 key encoded in base64 using openssl tool (i.e 24 bytes)
+alias rp='openssl rand -base64 24'
+
+
+# Knowhost configuration command
+alias ekh='atom ~/.ssh/known_hosts'
+
+##### Homebrew Alias added 190226 revised 200423
+alias bv='brew --version'
+alias bu='brew update && brew upgrade'
+alias bd='brew doctor'
+alias bo='brew outdated'
+alias bc='brew --cache'
+alias bcl='brew cask list > ~/Documents/dotfiles/brewcasklist.txt && brew cask list'
+alias bcs='echo "searching....." && brew search --cask $1'
+alias brew cask list='brew cask list > ~/Documents/dotfiles/brewcasklist.txt && brew cask list'
+alias bi='brew install $1 && brew list > ~/Documents/dotfiles/brewlist.txt'
+alias brew install='brew install $1 && brew list > ~/Documents/dotfiles/brewlist.txt'
+alias bci='brew cask install $1 && brew cask list > ~/Documents/dotfiles/brewcasklist.txt'
+alias brew cask install='brew cask install $1 && brew cask list> ~/Documents/dotfiles/brewcasklist.txt'
+alias bl='brew list > ~/Documents/dotfiles/brewlist.txt && brew list'
+alias bp='brew pin &'
+alias bup='brew unpin &'
+alias bcu='brew cleanup &'
+alias bcun='brew cleanup -n &'
+alias bsc='brew services cleanup'
+alias bsl='brew services list'
+alias bsr='brew services restart --all'
+alias bss='brew services stop --all'
+alias bst='brew services start --all'
+
+
+##### From https://github.com/joshnh/bash_profile/blob/master/.bash_profile
+# Git Aliases
+alias get='git '
+alias gut='git '
+alias got='git '
+alias g='git '
+alias gi='git init '
+alias gs='git status -sb '
+alias ga='git add '
+alias gap='git add .'
+alias gc='git commit -m '
+alias gac='ga -A && gc '
+##### Added by dutchmichael 200425
+gpc() {
+    git add .
+    if [ "$1" != "" ] # or better, if [ -n "$1" ]
+    then
+        git commit -m "$1"
+    else
+        git commit -m update
+    fi
+    git push -u origin master
+}
+# alias gp='git commit -a -m $1 && git push -u origin master'
+alias gpo='git push origin '
+alias gpom='git push -u origin master'
+alias gr='git rm -r '
+alias gb='git checkout -b '
+alias gco='git checkout - '
+alias gd='git diff '
+alias gcma='git commit -a -m'
+alias gv='git --version'
+
+# History Commands
+alias h='history'
+alias hg='history | grep $1'
+
+# HTTP(S) commands
+alias l80='sudo lsof -i :80 | egrep "PID|LISTEN"'
+alias ml='nmap 127.0.0.1'
+
+# IP Address Comanads
+alias ip='curl ipecho.net/plain ; echo'
+alias iip='ifconfig | grep inet'
+
+# Jekyll commands
+alias js='bundle exec jekyll serve'
+
+# List commands
+alias ll='ls -la'
+
+# Log file commands
+alias logs='atom /usr/local/var/log .'
+# alias logs='atom /usr/local/var/log .'
+
+
+
+
+# MariaDB
+#alias mysql='mysql -uroot -pM1dAp3x4274'
+#alias mariadb='mysql -uroot -pM1dAp3x4274'
+#alias restartdb='brew services restart mariadb'
+#alias startdb='brew services start mariadb'
+#alias stopdb='brew services stop mariadb'
+
+# MySQL commands
+# Start and stop MySQL
+alias sdb='sudo /usr/local/mysql/support-files/mysql.server start'
+alias dbv='/usr/local/mysql/bin/mysql -v -uroot -p'
+alias rsa='sudo apachectl restart'
+
+# Middleman commands
+alias ms='middleman server'
+
+# Nodejs commands
+alias nd='echo "Running nodenv-doctor https://github.com/nodenv/nodenv-installer#nodenv-doctor"  && curl -fsSL https://raw.githubusercontent.com/nodenv/nodenv-installer/master/bin/nodenv-doctor | bash'
+
+# PHP Congiguration command
+alias epi='atom /usr/local/etc/php/7.3/php.ini'
+
+# PHPmyadmin configuration command
+alias emc='atom /usr/local/etc/phpmyadmin.config.inc.php'
+
+# Ping commands
+alias ping='ping -c 5'
+
+# Remote Servers
+alias sp1='ssh root@45.79.195.179'
+alias sp2='ssh dutchmichael@67.205.15.136'
+alias pumc='ssh pumcavroom@pumc-salisbury.org'
+alias sshp='ssh dutchmichael@pumc-salisbury.org'
+alias t0='ssh -R 52698:localhost:52698 midapex1@midapex.com'
+alias t1='ssh -p4274 -R 52698:localhost:52698 root@23.239.18.12'
+alias ram='ssh midapex1@midapex.com'
+
+# Roots.io Trellis Ansible Commands
+alias cdt='echo "changing to trellis directory" && cd /Users/dutchmichael/Sites/trellis/midapex.com/trellis/'
+alias ave='ansible-vault encrypt group_vars/all/vault.yml && ansible-vault encrypt group_vars/development/vault.yml && ansible-vault encrypt group_vars/production/vault.yml && ansible-vault encrypt group_vars/staging/vault.yml'
+alias avd='ansible-vault decrypt group_vars/all/vault.yml && ansible-vault decrypt group_vars/development/vault.yml && ansible-vault decrypt group_vars/production/vault.yml && ansible-vault decrypt group_vars/staging/vault.yml'
+alias egv='atom $PWD/group_vars .'
+# ansible-vault encrypt cd /Users/dutchmichael/Sites/trellis/midapex.com/trellis/group_vars/all/vault.yml group_vars/development/vault.yml group_vars/staging/vault.yml group_vars/production/vault.yml
+# /Users/dutchmichael/Sites/trellis/midapex.com/trellis/group_vars
+#
+
+# Roots.io commands
+# alias cdt='echo "changing to trellis directory" && cd /Users/dutchmichael/Sites/trellis/midapex.com/trellis/'
+# alias ave='ansible-vault encrypt group_vars/all/vault.yml && ansible-vault encrypt group_vars/development/vault.yml && ansible-vault encrypt group_vars/production/vault.yml && ansible-vault encrypt group_vars/staging/vault.yml'
+# alias avd='ansible-vault decrypt group_vars/all/vault.yml && ansible-vault decrypt group_vars/development/vault.yml && ansible-vault decrypt group_vars/production/vault.yml && ansible-vault decrypt group_vars/staging/vault.yml'
+# alias egv='atom $PWD/group_vars .'
+# alias cdt='cd ~/Projects/Roots.io/trellis'
+# ansible-vault encrypt cd /Users/dutchmichael/Sites/trellis/midapex.com/trellis/group_vars/all/vault.yml group_vars/development/vault.yml group_vars/staging/vault.yml group_vars/production/vault.yml
+# /Users/dutchmichael/Sites/trellis/midapex.com/trellis/group_vars
+#
+
+# Shell command
+alias shell='echo $SHELL'
+
+#SSH configuration commands
+alias ss='source ~/.ssh/config'
+alias esc='cp ~/.ssh/config ~/.ssh/config.$(date +%y%%d) && atom ~/.ssh/config'
+
+# Atom Text commands
+alias ap='atom .'
+
+#Sytem profiler command
+alias sp='system_profiler SPSoftwareDataType'
+
+# Vagrant Commands
+alias vs='vagrant status'
+alias vssh='vagrant ssh'
+alias vu='vagrant up'
+alias vh='vagrant halt'
+alias vrp='vagrant reload --provision'
+alias vtso='vagrant trellis-sequel open'
+
+# Virtual host commands
+alias evh='atom /usr/local/etc/httpd/extra/httpd-vhosts.conf'
+
+# Zsh congigurstoin commands
+alias bca='cp ~/.oh-my-zsh/custom/custom_alias.zsh ~/.oh-my-zsh/custom/custom_alias.zsh.$(date +%y%m%d)'
+alias cdzc='cd ~/.oh-my-zsh/custom'
+alias ez='atom ~/.zshrc'
+alias sz='source ~/.zshrc'
+alias ezh='atom ~/.oh-my-zsh/custom/custom_hash.zsh'
+alias ebr='atom ~/Documents/dotfiles/bashrc && atom ~/.oh-my-zsh/custom/custom_alias.zsh && atom ~/.zshrc'
+
+# This writes when I run command sz
+echo "sourced .zshrc"
+# end custom_alias.zsh
