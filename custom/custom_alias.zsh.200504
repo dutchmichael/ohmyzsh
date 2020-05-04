@@ -1,0 +1,312 @@
+# ~/.oh-my-zsh/custom/custom_alias.zsh
+# custom aliases for Oh My ZSH
+# Mike Van Voorhis
+# Version 20.05.03 - Added .gitignore(_global) file editing and modified git push
+#
+# a quick way to get out of current directory, I can't recall where I came across this. ##
+alias ..='cd ..'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias .....='cd ../../../../'
+alias .4='cd ../../../../'
+alias .5='cd ../../../../../'
+
+# Alias greg command
+alias ag='alias | grep $1'
+alias agb='alias | grep brew'
+alias agg='alias | grep git'
+alias agga='alias | grep "git add"'
+alias aggc='alias | grep "git commit"'
+alias aggp='alias | grep "git push"'
+alias aggl='alias | grep "git pull"'
+alias aggs='alias | grep "git status"'
+
+# Apache commands
+alias act='mate apachectl configtest'
+alias eac='mate /usr/local/etc/httpd/httpd.conf'
+alias eca='mate ~/.oh-my-zsh/custom/custom_alias.zsh'
+
+# Application Commands
+alias al='ls /Applications > ~/Documents/dotfiles/applications.txt && ls /Applications'
+
+# Change directory commands
+alias cdd='cd ~/Sites/dutchmichael.com'
+alias cdh='cd ~/ && ls -la && echo "You are in your home directory"'
+alias cdn='cd ~/.nodenv && ls -la'
+alias cds='cd ~/Sites && ls -la'
+alias cddg='cd ~/Sites/dutchmichael.github.io && ls -la'
+alias cdm='cd ~/Sites/middleman && ls -la'
+alias cdulb='cd /usr/local/bin && ls -la'
+# alias cdt='cd ~/Projects/Roots.io/trellis'
+
+# Clear screen command
+alias c='clear'
+
+# DNSmasq configuration command
+alias edc='mate /usr/local/etc/dnsmasq.conf'
+# DNS on localhost dnsmasq commands
+# alias # stopdns='sudo launchctl stop homebrew.mxcl.dnsmasq'
+# alias # startdns='sudo launchctl start homebrew.mxcl.dnsmasq'
+
+# find file command
+alias ff="find ~/ -type f -name "
+
+# Flush cache command
+alias fc='sudo killall -HUP mDNSResponder'
+# The following was for older MacOS <10.11
+# alias fc='sudo dscacheutil -flushcache'
+# sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;say cache flushed
+# -flushcache
+# 		Flushes the entire cache.  This should only be used in extrem#e
+#		cases.  Validation information is used within the cache along
+#		with other techniques to ensure the OS has valid information
+#		available to it.
+
+# Knowhost configuration command
+alias ekh='mate ~/.ssh/known_hosts'
+
+##### Homebrew commands
+alias bv='brew --version'
+alias bu='brew update && brew upgrade'
+alias bd='brew doctor'
+alias bo='brew outdated'
+alias bc='brew --cache'
+# alias bcl='brew cask list > ~/Documents/dotfiles/brewcasklist.txt && brew cask list'
+alias bcs='echo "searching....." && brew search --cask $1'
+# alias brew cask list='brew cask list > ~/Documents/dotfiles/brewcasklist.txt && brew cask list'
+# alias bi='brew install $1 && brew list > ~/Documents/dotfiles/brewlist.txt'
+# alias brew install='brew install $1 && brew list > ~/Documents/dotfiles/brewlist.txt'
+# alias bci='brew cask install $1 && brew cask list > ~/Documents/dotfiles/brewcasklist.txt'
+# alias brew cask install='brew cask install $1 && brew cask list> ~/Documents/dotfiles/brewcasklist.txt'
+alias bl='brew list'
+# > ~/Documents/dotfiles/brewlist.txt && brew list'
+alias bp='brew pin &'
+alias bup='brew unpin &'
+alias bcu='brew cleanup &'
+alias bcun='brew cleanup -n &'
+alias bsc='brew services cleanup'
+alias bsl='brew services list'
+alias bsr='brew services restart --all'
+alias bsrh='brew services restart httpd'
+alias bss='brew services stop --all'
+alias bst='brew services start --all'
+
+# Git Aliases
+alias get='git '
+alias gut='git '
+alias got='git '
+alias g='git '
+alias gv='git --version'
+
+# git add
+alias ga='git add '
+alias gap='git add .'
+
+# git branch
+alias gb='git checkout -b '
+
+# git checkout
+alias gco='git checkout - '
+
+# git commit
+alias gc='git commit -m '
+alias gcma='git commit -a -m'
+
+# git config
+alias egc='git config -e'
+alias egcg='git config --global -e'
+alias gclso='git config --list --show-origin'
+
+# git diff
+alias gd='git diff '
+
+# git init
+alias gi='git init '
+
+# git hub
+alias ghc='mate ~/.config/hub'
+alias ghgc='hub gist create --copy $1  && echo "created gist on github titled $1"'
+# api            Low-level GitHub API request interface
+# browse         Open a GitHub page in the default browser
+alias ghb='hub browse'
+# ci-status      Show the status of GitHub checks for a commit
+# compare        Open a compare page on GitHub
+# create         Create this repository on GitHub and add GitHub as origin
+alias ghcp='hub create -p -o --remote-name github'
+# delete         Delete a repository on GitHub
+# fork           Make a fork of a remote repository on GitHub and add as remote
+# gist           Make a gist
+# issue          List or create GitHub issues
+# pr             List or checkout GitHub pull requests
+# pull-request   Open a pull request on GitHub
+# release        List or create GitHub releases
+# sync           Fetch git objects from upstream and update branches
+
+# git push
+alias gp='git push -uv'
+alias gpo='git push -uv origin'
+alias gpgl='git push -uv github local'
+alias gpgm='git push -uv github master'
+alias gpom='git push -uv origin master'
+
+# git remove
+alias gr='git rm -r '
+
+# git status
+alias gs='git status -sb '
+alias gsl="git status --long"
+
+# git add && commit && push
+alias gac='ga -A && gc '
+alias gpom='git push -uv origin master'
+alias gcapom='git commit -a -m $1 && git push -u origin master'
+alias gpdc='git push -u dm custom'
+
+##### Added by dutchmichael 200425
+gpc() {
+    git add .
+    if [ "$1" != "" ] # or better, if [ -n "$1" ]
+    then
+        git commit -m "$1"
+    else
+        git commit -m update
+    fi
+    git push -u github local
+}
+##### end gpc
+
+# gitignore
+alias gigg='mate ~/.gitignore_global'
+alias gig='mate .gitignore'
+
+# Hidden Files
+alias shf='defaults write com.apple.finder AppleShowAllFiles YES'
+alias hhf='defaults write com.apple.finder AppleShowAllFiles NO'
+
+# History Commands
+alias h='history'
+alias hg='history | grep $1'
+
+# HTTP(S) commands
+alias l80='sudo lsof -i :80 | egrep "PID|LISTEN"'
+alias ml='nmap 127.0.0.1'
+
+# IP Address Comanads
+alias ip='curl ipecho.net/plain ; echo'
+alias iip='ifconfig | grep inet'
+
+# Jekyll commands
+alias js='bundle exec jekyll serve'
+
+# List commands
+alias ll='ls -la'
+
+# Log file commands
+alias logs='mate /usr/local/var/log .'
+# alias logs='mate /usr/local/var/log .'
+
+# MariaDB
+alias mysql='mysql -uroot -p[PASSWORD]'
+alias mariadb='mysql -uroot -p[PASSWORD]'
+alias restartdb='brew services restart mariadb'
+alias startdb='brew services start mariadb'
+alias stopdb='brew services stop mariadb'
+
+# MySQL commands
+# Start and stop MySQL
+alias sdb='sudo /usr/local/mysql/support-files/mysql.server start'
+alias dbv='/usr/local/mysql/bin/mysql -v -uroot -p'
+alias rsa='sudo apachectl restart'
+
+# Middleman commands
+alias ms='middleman server'
+
+# Nodejs commands
+alias nd='echo "Running nodenv-doctor https://github.com/nodenv/nodenv-installer#nodenv-doctor"  && curl -fsSL https://raw.githubusercontent.com/nodenv/nodenv-installer/master/bin/nodenv-doctor | bash'
+
+# PHP Congiguration command
+alias epi='mate /usr/local/etc/php/7.4/php.ini'
+
+# PHPmyadmin configuration command
+alias emc='mate /usr/local/etc/phpmyadmin.config.inc.php'
+
+# Ping commands
+alias ping='ping -c 5'
+
+# Port Check
+alias p5='echo "executing command [ sudo lsof -i tcp:52698 ]" && sudo lsof -i tcp:52698'
+
+# Random password generator, a DES3 key encoded in base64 using openssl tool (i.e 24 bytes)
+alias rp='openssl rand -base64 24'
+
+# Remote Servers
+alias sp1='ssh root@45.79.195.179'
+alias sp2='ssh dutchmichael@67.205.15.136'
+alias pumc='ssh pumcavroom@pumc-salisbury.org'
+alias sshp='ssh dutchmichael@pumc-salisbury.org'
+alias t0='ssh -v -R 52698:localhost:52698 midapex1@midapex.com'
+alias t1='ssh -p4274 -R 52698:localhost:52698 root@23.239.18.12'
+alias ram='ssh -v midapex1@midapex.com'
+
+# Roots.io Trellis Ansible Commands
+alias cdt='echo "changing to trellis directory" && cd /Users/dutchmichael/Sites/trellis/midapex.com/trellis/'
+alias ave='ansible-vault encrypt group_vars/all/vault.yml && ansible-vault encrypt group_vars/development/vault.yml && ansible-vault encrypt group_vars/production/vault.yml && ansible-vault encrypt group_vars/staging/vault.yml'
+alias avd='ansible-vault decrypt group_vars/all/vault.yml && ansible-vault decrypt group_vars/development/vault.yml && ansible-vault decrypt group_vars/production/vault.yml && ansible-vault decrypt group_vars/staging/vault.yml'
+alias egv='mate $PWD/group_vars .'
+# ansible-vault encrypt cd /Users/dutchmichael/Sites/trellis/midapex.com/trellis/group_vars/all/vault.yml group_vars/development/vault.yml group_vars/staging/vault.yml group_vars/production/vault.yml
+# /Users/dutchmichael/Sites/trellis/midapex.com/trellis/group_vars
+#
+
+# Roots.io commands
+# alias cdt='echo "changing to trellis directory" && cd /Users/dutchmichael/Sites/trellis/midapex.com/trellis/'
+# alias ave='ansible-vault encrypt group_vars/all/vault.yml && ansible-vault encrypt group_vars/development/vault.yml && ansible-vault encrypt group_vars/production/vault.yml && ansible-vault encrypt group_vars/staging/vault.yml'
+# alias avd='ansible-vault decrypt group_vars/all/vault.yml && ansible-vault decrypt group_vars/development/vault.yml && ansible-vault decrypt group_vars/production/vault.yml && ansible-vault decrypt group_vars/staging/vault.yml'
+# alias egv='mate $PWD/group_vars .'
+# alias cdt='cd ~/Projects/Roots.io/trellis'
+# ansible-vault encrypt cd /Users/dutchmichael/Sites/trellis/midapex.com/trellis/group_vars/all/vault.yml group_vars/development/vault.yml group_vars/staging/vault.yml group_vars/production/vault.yml
+# /Users/dutchmichael/Sites/trellis/midapex.com/trellis/group_vars
+#
+
+# Shell command
+alias shell='echo $SHELL'
+alias csb='chsh -s /bin/bash'
+alias csz='chsh -s /bin/zsh'
+
+#SSH configuration commands
+alias ss='source ~/.ssh/config'
+alias esc='cp ~/.ssh/config ~/.ssh/config.$(date +%y%%d) && mate ~/.ssh/config'
+
+#Sytem profiler command
+alias sp='system_profiler SPSoftwareDataType'
+
+# Textmate commands
+alias mp='mate .'
+alias etmgc='mate ~/Library/Application\ Support/TextMate/Global.tmProperties'
+
+# Vagrant Commands
+alias vs='vagrant status'
+alias vssh='vagrant ssh'
+alias vu='vagrant up'
+alias vh='vagrant halt'
+alias vrp='vagrant reload --provision'
+alias vtso='vagrant trellis-sequel open'
+
+# Virtual host commands
+alias evh='mate /usr/local/etc/httpd/extra/httpd-vhosts.conf'
+alias svh='source /usr/local/etc/httpd/extra/httpd-vhosts.conf'
+alias lvh='httpd -D DUMP_INCLUDES'
+alias tvh='httpd -S'
+
+# WP-CLI commands
+alias wppl='wp plugin list'
+alias wppu='wp plugin uninstall $1'
+
+# Zsh congigurstoin commands
+alias buca='cp ~/.oh-my-zsh/custom/custom_alias.zsh ~/.oh-my-zsh/custom/custom_alias.zsh.$(date +%y%m%d)'
+alias cdzc='cd ~/.oh-my-zsh/custom'
+alias ez='mate ~/.zshrc'
+alias sz='source ~/.zshrc'
+alias ezh='mate ~/.oh-my-zsh/custom/custom_hash.zsh'
+alias ebr='mate ~/Documents/dotfiles/bashrc && mate ~/.oh-my-zsh/custom/custom_alias.zsh && mate ~/.zshrc'
+
+########## custom_alias.zsh ###########
