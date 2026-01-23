@@ -90,7 +90,7 @@ alias cdm='cd ~/Sites/middleman && ls -la'
 
 alias cdulb='cd /usr/local/bin && ls -la'
 
-# Check Sum
+##### ----- Check Sum ----- #####
 alias cs='shasum ~/Downloads/*'
 
 ##### ----- Clear Screen Command ----- #####
@@ -99,7 +99,7 @@ alias c='clear'
 ##### ----- Custom Aliases ----- #####
 alias cdca='cd ~/.oh-my-zsh/custom'
 alias cdzc='cd ~/.oh-my-zsh/custom'
-alias eca='mate --wait ~/.oh-my-zsh/custom/custom_alias.zsh && git add -f ~/.oh-my-zsh/custom/custom_alias.zsh && git commit -m "updated custom aliases" && git push -u origin custom'
+alias eca='mate --wait ~/.oh-my-zsh/custom/custom_alias.zsh && git add -f ~/.oh-my-zsh/custom/custom_alias.zsh && git commit -m "updated custom aliases" && git push -u git@github.com:/dutchmichael/ohmyzsh.git custom'
 alias ez='mate -w ~/.zshrc && git add -f ~/.zshrc && git commit -m "updated .zshrc" && git push -u git@github.com:/dutchmichael/dotfiles_macos.git'
 alias ezp='mate -w ~/.zprofile && git add -f ~/.zprofile && git commit -m "updated .zprofile" && git push -u git@github.com:/dutchmichael/dotfile_macos.git'
 alias mca='more ~/.oh-my-git zsh/custom/custom_alias.zsh'
