@@ -99,7 +99,7 @@ alias c='clear'
 ##### ----- Custom Aliases ----- #####
 alias cdca='cd ~/.oh-my-zsh/custom'
 alias cdzc='cd ~/.oh-my-zsh/custom'
-alias eca='mate --wait ~/.oh-my-zsh/custom/custom_alias.zsh && git add -f ~/.oh-my-zsh/custom/custom_alias.zsh && git commit -m "updated custom aliases" && git push -u git@github.com:/dutchmichael/ohmyzsh.git custom'
+alias eca='cd ~/.oh-my-zsh/custom && mate --wait ~/.oh-my-zsh/custom/custom_alias.zsh && git add -f ~/.oh-my-zsh/custom/custom_alias.zsh && git commit -m "updated custom aliases" && git push -u git@github.com:/dutchmichael/ohmyzsh.git custom'
 alias ez='mate -w ~/.zshrc && git add -f ~/.zshrc && git commit -m "updated .zshrc" && git push -u git@github.com:/dutchmichael/dotfiles_macos.git'
 alias ezp='mate -w ~/.zprofile && git add -f ~/.zprofile && git commit -m "updated .zprofile" && git push -u git@github.com:/dutchmichael/dotfile_macos.git'
 alias mca='more ~/.oh-my-git zsh/custom/custom_alias.zsh'
@@ -528,26 +528,31 @@ alias pip='/opt/homebrew/bin/pip3'
 # ---Random password generator, a DES3 key encoded in base64 using openssl tool (i.e 24 bytes) ---
 alias rp='openssl rand -base64 24'
 
-# --- Remote Servers ---
+##### ----- Remote Servers ----- #####
 
-# 	move to ~/.ssh/ssh_config
+# 	move to ~/.ssh/ssh_config?
+
+# Home
+alias h1='ssh -v -p4274 -R 52698:localhost:52698 dutchmichael@192.168.1.33'
+# ServerCheap
+alias s1=='ssh -vvv dutchmichael@s1.midapex.net' # IP 65.75.200.74
 
 # alias sp1='ssh root@45.79.195.179'
 # alias sp2='ssh dutchmichael@67.205.15.136'
-alias mms='ssh -v -p4274 -R 52698:localhost:52698 dutchmichael@192.168.1.33'
-alias pumc='ssh pumcavroom@pumc-salisbury.org'
-alias sshp='ssh dutchmichael@pumc-salisbury.org'
+# alias mms='ssh -v -p4274 -R 52698:localhost:52698 dutchmichael@192.168.1.33'
+# alias pumc='ssh pumcavroom@pumc-salisbury.org'
+# alias sshp='ssh dutchmichael@pumc-salisbury.org'
 # alias t0='ssh -v midapex1@midapex.com'
-alias tmac='ssh -v -p4274 -R 52698:localhost:52698 dutchmichael@192.168.1.33'
+# alias tmac='ssh -v -p4274 -R 52698:localhost:52698 dutchmichael@192.168.1.33'
 # alias tmac='ssh -v -p4274 -R /home/dutchmichael/.rmate.socket:localhost:52698 dutchmichael@192.168.1.33'
-alias t0='ssh -v -p4274 -R 52698:localhost:52698 dutchmichael@t0.midapex.net'
+# alias t0='ssh -v -p4274 -R 52698:localhost:52698 dutchmichael@t0.midapex.net'
 # alias tmac='ssh -v -R 52698:localhost:52698 dutchmichael@92.168.1.105'
-alias t00='ssh -v -R 52698:localhost:52698 midapex1@midapex.com'
-alias t1='ssh -v -p4274 dutchmichael@t1.midapex.net'
-alias t11='ssh -p4274 -R 52698:localhost:52698 dutchmichael@t1.midapex.net'
-alias ram='ssh -v midapex1@midapex.com'
-alias dm='ssh -v dutchmichael@dutchmichael.com'
-alias vpn='ssh -p4274 dutchmichael@vpn.midapex.net'
+# alias t00='ssh -v -R 52698:localhost:52698 midapex1@midapex.com'
+# alias t1='ssh -v -p4274 dutchmichael@t1.midapex.net'
+# alias t11='ssh -p4274 -R 52698:localhost:52698 dutchmichael@t1.midapex.net'
+# alias ram='ssh -v midapex1@midapex.com'
+# alias dm='ssh -v dutchmichael@dutchmichael.com'
+# alias vpn='ssh -p4274 dutchmichael@vpn.midapex.net'
 # took off -v to try to see it the following debug message goes alway
 # debug1: client_input_channel_req: channel 0 rtype keepalive@openssh.com reply 1
 # MFV 230930
