@@ -98,17 +98,15 @@ alias c='clear'
 ##### ----- Custom Aliases ----- #####
 alias cdca='cd ~/.oh-my-zsh/custom'
 alias cdzc='cd ~/.oh-my-zsh/custom'
-alias eca='cp ~/dotfiles_macos/custom_alias.zsh ~/dotfiles_macos_backup/custom_alias.zsh.$(date +"%Y%m%d%H%M%S") && mate -w ~/.oh-my-zsh/custom/custom_alias.zsh'
-alias ez='mate -w ~/.zshrc && '
-alias ez='cp ~/dotfiles_macos/zshrc ~/dotfiles_macos_backup/zshrc.$(date +"%Y%m%d%H%M%S") && mate -w ~/.zshrc'
-alias ezh='cp ~/dotfiles_macos/custom_hash.zsh ~/dotfiles_macos_backup/custom_hash.zsh.$(date +"%Y%m%d%H%M%S") && mate -w ~/.oh-my-zsh/custom/custom_hash.zsh'
-alias ezp='cp ~/dotfiles_macos/zprofile ~/dotfiles_macos_backup/zprofile.$(date +"%Y%m%d%H%M%S") && mate -w ~/.zprofile'
+alias eca='mate -w ~/.oh-my-zsh/custom/custom_alias.zsh && git add -f ~/.oh-my-zsh/custom/custom_alias.zsh && git commit -m "updated custom aliases" && git push -u git@github.com:/dutchmichael/ohmyzsh.git'
+alias ez='mate -w ~/.zshrc && git add -f ~/.zshrc && git commit -m "updated .zshrc" && git push -u git@github.com:/dutchmichael/dotfiles_macos.git'
+alias ezp='mate -w ~/.zprofile && git add -f ~/.zprofile && git commit -m "updated .zprofile" && git push -u git@github.com:/dutchmichael/dotfiles_macos.git'
 alias mca='more ~/.oh-my-zsh/custom/custom_alias.zsh'
 alias sz='source ~/.zshrc'
-alias vca='vim ~/.oh-my-zsh/custom/custom_alias.zsh'
+# alias vca='vim ~/.oh-my-zsh/custom/custom_alias.zsh'
 # alias ut1='echo "Need the enter "cryptroot-unlock" then enter password" && ssh -i ~/.ssh/t1_midapex_com -p 4274 -o "HostKeyAlgorithms ssh-rsa" root@192.168.0.100'
 
-# debug
+##### ----- debug ----- #####
 alias dssh='ssh -v /usr/bin/ssh'
 
 # DNSmasq configuration command
@@ -124,7 +122,7 @@ alias edc='mate /usr/local/etc/dnsmasq.conf'
 alias dd='ddgr -n 4'
 alias ddm='man ddgr'
 
-# Find commands
+##### ----- Find commands ----- #####
 alias ag='alias | grep $1'
 alias ags='alias | grep ssh'
 alias af='alias | grep $1'
@@ -768,6 +766,6 @@ killjobs () {
 }
 
 date
-echo 'Custom aliases loaded'
+echo 'All custom aliases are loaded'
 
 ########## custom_alias.zsh ###########
