@@ -520,9 +520,9 @@ alias pmss='sudo pmset repeat shutdown MTWRFSU 22:00:00 wakeorpoweron MTWRFSU 5:
 alias p5='echo "executing command [ sudo lsof -i tcp:52698 ]" && sudo lsof -i tcp:52698'
 
 # --- Python version redirects ---
-alias python='opt/homebrew/bin/python3'
+# alias python='opt/homebrew/bin/python3'
 # alias python2=/usr/bin/python
-alias pip='/opt/homebrew/bin/pip3'
+# alias pip='/opt/homebrew/bin/pip3'
 # alias python='python3'
 
 # ---Random password generator, a DES3 key encoded in base64 using openssl tool (i.e 24 bytes) ---
