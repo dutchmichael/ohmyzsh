@@ -58,6 +58,7 @@ alias bup='brew unpin &'
 alias bus='brew uses --installed $1'
 alias bcu='brew cleanup &'
 alias bcun='brew cleanup -n &'
+alias cbu='more ~/.scripts/brew_auto_update.log'
 
 # --- Brew Services ---
 alias bsc='brew services cleanup'
@@ -71,7 +72,7 @@ alias bst='brew services start --all'
 # --- Blue Tooth ---
 alias bto='system_profiler SPBluetoothDataType'
 
-# Change directory commands
+###### ----- Change directory commands ----- #####
 alias ..='cd ..'
 alias ...='cd ../../'
 alias ....='cd ../../../'
@@ -98,10 +99,10 @@ alias c='clear'
 ##### ----- Custom Aliases ----- #####
 alias cdca='cd ~/.oh-my-zsh/custom'
 alias cdzc='cd ~/.oh-my-zsh/custom'
-alias eca='mate -w ~/.oh-my-zsh/custom/custom_alias.zsh && git add -f ~/.oh-my-zsh/custom/custom_alias.zsh && git commit -m "updated custom aliases" && git push -u git@github.com:/dutchmichael/ohmyzsh.git'
+alias eca='mate --wait ~/.oh-my-zsh/custom/custom_alias.zsh && git add -f ~/.oh-my-zsh/custom/custom_alias.zsh && git commit -m "updated custom aliases" && git push -u origin custom'
 alias ez='mate -w ~/.zshrc && git add -f ~/.zshrc && git commit -m "updated .zshrc" && git push -u git@github.com:/dutchmichael/dotfiles_macos.git'
-alias ezp='mate -w ~/.zprofile && git add -f ~/.zprofile && git commit -m "updated .zprofile" && git push -u git@github.com:/dutchmichael/ohmyzsh.git'
-alias mca='more ~/.oh-my-zsh/custom/custom_alias.zsh'
+alias ezp='mate -w ~/.zprofile && git add -f ~/.zprofile && git commit -m "updated .zprofile" && git push -u git@github.com:/dutchmichael/dotfile_macos.git'
+alias mca='more ~/.oh-my-git zsh/custom/custom_alias.zsh'
 alias sz='source ~/.zshrc'
 # alias vca='vim ~/.oh-my-zsh/custom/custom_alias.zsh'
 # alias ut1='echo "Need the enter "cryptroot-unlock" then enter password" && ssh -i ~/.ssh/t1_midapex_com -p 4274 -o "HostKeyAlgorithms ssh-rsa" root@192.168.0.100'
@@ -257,18 +258,18 @@ alias gremove='git rm -r '
 #alias gru='git reset --'
 #alias gunwip='git log -n 1 | grep -q -c "\-\-wip\-\-" && git reset HEAD~1'
 
-# --- Git SSH [gitssh] ---
+# Git SSH [gitssh]
 alias gitssh="usermod -s /bin/bash git"
 # reference
 # https://stackoverflow.com/questions/22314298/git-push-results-in-fatal-protocol-error-bad-line-length-character-this
 
-# --- git status [gs] ---
+# git status [gs]
 alias aggs='alias | grep "git status"'
 alias gsf='alias | grep "git status"'
 alias gs='git status -sb '
 alias gsl="git status --long"
 
-# --- Git Submodule ---
+# Git Submodule
 #alias aggsm='alias | grep "git submodule"'
 #alias gsmf='alias | grep "git submodule"'
 #alias fgsm='alias | grep "git submodule"'
@@ -277,11 +278,11 @@ alias gsl="git status --long"
 #alias gsu='git submodule update'
 #alias gsmu='git submodule update'
 
-# --- git add && commit && push [gcp] ---
+# git add && commit && push [gcp]
 alias gac='ga -A && gc '
 alias gcapom='git commit -a -m $1 && git push -u origin main'
 
-# --- FUNCTION GPC --- Git add push commit ---
+# Function gpc (git add push commit)
 gpc() {
     git add .
     if [ "$1" != "" ] # or better, if [ -n "$1" ]
@@ -423,15 +424,11 @@ alias ghc='mate ~/.config/gh'
 #     -h --help                                 Show help for this command.
 #     -v --version                              Show glab version information
 
-
-
-# --- Hidden Files ---
-
+##### ----- Hidden Files ----- #####
 alias shf='defaults write com.apple.finder AppleShowAllFiles YES'
 alias hhf='defaults write com.apple.finder AppleShowAllFiles NO'
 
-# --- History Commands ---
-
+##### ----- History Commands ----- #####
 alias h='history -f'
 alias hg='history -f | grep $1'
 
@@ -537,7 +534,7 @@ alias rp='openssl rand -base64 24'
 
 # alias sp1='ssh root@45.79.195.179'
 # alias sp2='ssh dutchmichael@67.205.15.136'
-alias mms='ssh -v -p4274 dutchmichael@192.168.1.33'
+alias mms='ssh -v -p4274 -R 52698:localhost:52698 dutchmichael@192.168.1.33'
 alias pumc='ssh pumcavroom@pumc-salisbury.org'
 alias sshp='ssh dutchmichael@pumc-salisbury.org'
 # alias t0='ssh -v midapex1@midapex.com'
