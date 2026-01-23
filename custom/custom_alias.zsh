@@ -535,7 +535,7 @@ alias rp='openssl rand -base64 24'
 # Home
 alias h1='ssh -v -p4274 -R 52698:localhost:52698 dutchmichael@192.168.1.33'
 # ServerCheap
-alias s1=='ssh -v dutchmichael@s1.midapex.net' # IP 65.75.200.74
+alias s1='ssh -v dutchmichael@s1.midapex.net' # IP 65.75.200.74
 
 # alias sp1='ssh root@45.79.195.179'
 # alias sp2='ssh dutchmichael@67.205.15.136'
