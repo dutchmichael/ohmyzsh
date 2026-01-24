@@ -259,7 +259,7 @@ alias gremove='git rm -r '
 #alias gunwip='git log -n 1 | grep -q -c "\-\-wip\-\-" && git reset HEAD~1'
 
 # Git SSH [gitssh]
-alias gitssh="usermod -s /bin/bash git"
+# alias gitssh="usermod -s /bin/bash git"
 # reference
 # https://stackoverflow.com/questions/22314298/git-push-results-in-fatal-protocol-error-bad-line-length-character-this
 
@@ -530,10 +530,11 @@ alias rp='openssl rand -base64 24'
 
 ##### ----- Remote Servers ----- #####
 
-# 	move to ~/.ssh/ssh_config?
-
 # Home
-alias h1='ssh -v -p4274 -R 52698:localhost:52698 dutchmichael@192.168.1.33'
+alias h1='ssh -v -p4274 dutchmichael@192.168.1.33'
+
+#alias h1='ssh -v -p4274 -R 52698:localhost:52698 dutchmichael@192.168.1.33'
+
 # ServerCheap
 alias s1='ssh -v dutchmichael@s1.midapex.net' # IP 65.75.200.74
 
@@ -557,7 +558,6 @@ alias s1='ssh -v dutchmichael@s1.midapex.net' # IP 65.75.200.74
 # debug1: client_input_channel_req: channel 0 rtype keepalive@openssh.com reply 1
 # MFV 230930
 
-
 # --- SHA356 Checksum Function --- #
 
 #sha512() {
@@ -578,10 +578,12 @@ alias rssh='sudo launchctl unload /System/Library/LaunchDaemons/ssh.plist && sud
 # --- Sail | Lavavel ---
 # alias sail='bash vendor/bin/sail'
 
-#SSH configuration commands
+##### ----- SSH configuration commands ---- #####
 alias ss='source ~/.ssh/config'
+alias esc='cd ~ && mate --wait ~/.ssh/config && git add -f ~/.ssh/config && git commit -m "updated ssh config" && git push -u git@github.com:/dutchmichael/dotfile_macos.git main && cd -'
+
 # old alias esc='cp ~/.ssh/config ~/.ssh/config.$(date +%y%%d) && mate ~/.ssh/config'
-alias esc='cp ~/dotfiles_macos/config ~/dotfiles_macos_backup/config.$(date +"%Y%m%d%H%M%S") && mate ~/.ssh/config'
+# alias esc='cp ~/dotfiles_macos/config ~/dotfiles_macos_backup/config.$(date +"%Y%m%d%H%M%S") && mate ~/.ssh/config'
 
 #Sytem profiler command
 alias sp='system_profiler SPSoftwareDataType'
@@ -675,14 +677,6 @@ alias tps='trellis provision staging'
     # stop       Stops the development virtual machine.
     # sudoers    Generates sudoers content for passwordless updating of /etc/hosts
 # xdebug-tunnel    Commands for Xdebug tunnel
-
-# Vagrant Commands
-# alias vs='vagrant status'
-# alias vssh='vagrant ssh'
-# alias vu='vagrant up'
-# alias vh='vagrant halt'
-# alias vrp='vagrant reload --provision'
-# alias vtso='vagrant trellis-sequel open'
 
 # Virtual host commands
 # alias eud='mate /usr/local/etc/httpd/extra/httpd-userdir.conf'
