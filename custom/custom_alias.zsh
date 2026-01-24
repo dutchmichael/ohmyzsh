@@ -471,6 +471,7 @@ alias logs='mate /usr/local/var/log .'
 	
 ##### ----- Manual Commands ----- #####
 alias mb='man zshbuiltins'
+alias usd='open documentation-ubuntu-com-server-en-latest.pdf'
 
 # --- MariaDB ---
 #alias mysql='mysql -uroot -p[PASSWORD]'
