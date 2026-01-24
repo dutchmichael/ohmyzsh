@@ -572,7 +572,7 @@ alias csz='chsh -s /bin/zsh'
 # --- Synology Router ---
 alias sr='ssh -p4272 root@192.168.1.1'
 
-# Unload and load ssh
+##### Unload and load ssh
 alias rssh='sudo launchctl unload /System/Library/LaunchDaemons/ssh.plist && sudo launchctl load -w /System/Library/LaunchDaemons/ssh.plist && echo "reloaded ssh"'
 
 # --- Sail | Lavavel ---
