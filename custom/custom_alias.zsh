@@ -574,8 +574,9 @@ alias csz='chsh -s /bin/zsh'
 alias sr='ssh -p4272 root@192.168.1.1'
 
 ##### Unload and load ssh
-alias rssh='sudo launchctl unload /System/Library/LaunchDaemons/ssh.plist && sudo launchctl load -w /System/Library/LaunchDaemons/ssh.plist && echo "reloaded ssh"'
-
+alias rssh='sudo launchctl bootout /System/Library/LaunchDaemons/ssh.plist && sudo launchctl bootstrap -w /System/Library/LaunchDaemons/ssh.plist && echo "reloaded ssh"'
+# sudo launchctl unload /System/Library/LaunchDaemons/ssh.plist
+# sudo launchctl load -w /System/Library/LaunchDaemons/ssh.plist 
 # --- Sail | Lavavel ---
 # alias sail='bash vendor/bin/sail'
 
