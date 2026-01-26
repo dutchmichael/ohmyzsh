@@ -292,7 +292,7 @@ gpc() {
     git add .
     if [ "$1" != "" ] # or better, if [ -n "$1" ]
     then
-        git commit -m "$1"
+        git commit -m "$*"
     else
         git commit -m "update"
     fi
