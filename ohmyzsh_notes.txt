@@ -1,0 +1,18 @@
+~/.oh-my-zsh/ohmysch_notes.txt
+
+----- 1/26/2026 -----
+
+Reorganized remotes from this
+
+git@github.com/dutchmichael/ohmyzsh.git	master (fetch)
+git@github.com/dutchmichael/ohmyzsh.git	master (push)
+origin	https://github.com/ohmyzsh/ohmyzsh.git (fetch)
+origin	https://github.com/ohmyzsh/ohmyzsh.git (push)
+
+to this
+
+[I] ➜ grv                                                       
+origin	git@github.com:dutchmichael/ohmyzsh.git (fetch)
+origin	git@github.com:dutchmichael/ohmyzsh.git (push)
+upstream	git@github.com:ohmyzsh/ohmyzsh.git (fetch)
+upstream	git@github.com:ohmyzsh/ohmyzsh.git (push)
