@@ -86,7 +86,8 @@ alias cdhbc='cd /opt/homebrew/Cellar'
 alias cdn='cd ~/.nodenv && ls -la'
 alias cds='cd ~/Sites && ls -la'
 
-alias cdm='cd ~/Sites/middleman && ls -la'
+alias cdm='cd ~/Sites/roots/trellis/midapex.com && ls -la'
+alias cdmm='cd ~/Sites/middleman && ls -la'
 
 alias cdulb='cd /usr/local/bin && ls -la'
 
