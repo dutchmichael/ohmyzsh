@@ -150,6 +150,10 @@ alias flc='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder && echo 
 #		with other techniques to ensure the OS has valid information
 #		available to it.
 
+##### ----- Function Commands ----- ######
+alias fnl='print -l ${(ok)functions} && echo"Listed all fuctions by name"'	# List all functions by name
+alias fn='functions $1'	# Show the contents of a function"" 
+
 # EDit extension plist
 alias eep='cp ~/Library/Containers/com.apple.Safari/Data/Library/Safari/AppExtensions/Extensions.plist ~/dotfiles_macos_backup/Extensions.plist.$(date +"%Y%m%d%H%M%S") && mate ~/Library/Containers/com.apple.Safari/Data/Library/Safari/AppExtensions/Extensions.plist'
 
