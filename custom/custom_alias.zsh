@@ -770,6 +770,6 @@ killjobs () {
 }
 
 date
-echo 'All custom aliases are loaded'
+echo 'Custom aliases loaded'
 
 ########## custom_alias.zsh ###########
