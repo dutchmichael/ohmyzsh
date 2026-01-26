@@ -99,7 +99,7 @@ alias c='clear'
 ##### ----- Custom Aliases ----- #####
 alias cdca='cd ~/.oh-my-zsh/custom'
 alias cdzc='cd ~/.oh-my-zsh/custom'
-alias eca='cd ~/.oh-my-zsh/custom && mate --wait ~/.oh-my-zsh/custom/custom_alias.zsh && git add -f ~/.oh-my-zsh/custom/custom_alias.zsh && git commit -m "updated custom aliases" && git push -u git@github.com:/dutchmichael/ohmyzsh.git custom && cd -'
+alias eca='cd ~/.oh-my-zsh/custom && mate --wait ~/.oh-my-zsh/custom/custom_alias.zsh && git add -f ~/.oh-my-zsh/custom/custom_alias.zsh && git commit -m "updated custom aliases" && git push -u origin custom && cd -'
 alias ez='cd ~ && mate -w ~/.zshrc && git add -f ~/.zshrc && git commit -m "updated .zshrc" && git push -u git@github.com:/dutchmichael/dotfiles_macos.git && cd -'
 alias ezp='cd ~ && mate -w ~/.zprofile && git add -f ~/.zprofile && git commit -m "updated .zprofile" && git push -u git@github.com:/dutchmichael/dotfile_macos.git && cd -'
 alias mca='more ~/.oh-my-zsh/custom/custom_alias.zsh'
