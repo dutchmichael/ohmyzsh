@@ -203,9 +203,9 @@ alias gcoh='git checkout --help'
 
 # git commit [gc]
 alias aggc='alias | grep "git commit"'
-alias gc='git commit -m '
+alias gc='git commit -m "$*"'
 alias gch='git commit --help'
-alias gcma='git commit -a -m'
+alias gcma='git commit -a -m "$*"'
 
 # git config [gco]
 alias aggco='alias | grep "git config"'
