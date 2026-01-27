@@ -289,7 +289,7 @@ alias gcapom='git commit -a -m $1 && git push -u origin main'
 
 # Function gpc (git add push commit)
 gpc() {
-    git add .
+    git add -f .
     if [ "$1" != "" ] # or better, if [ -n "$1" ]
     then
         git commit -m "$*"
