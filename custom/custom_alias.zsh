@@ -160,6 +160,9 @@ alias eep='cp ~/Library/Containers/com.apple.Safari/Data/Library/Safari/AppExten
 # Knowhost configuration command
 alias ekh='mate ~/.ssh/known_hosts'
 
+##### ----- Generateme ----- #####
+
+
 ##### ----- Git ----- #####
 
 # .gitignore
@@ -536,7 +539,7 @@ alias p5='echo "executing command [ sudo lsof -i tcp:52698 ]" && sudo lsof -i tc
 # alias python='python3'
 
 # ---Random password generator, a DES3 key encoded in base64 using openssl tool (i.e 24 bytes) ---
-alias rp='openssl rand -base64 24'
+alias rp='openssl rand -base64 48'
 
 ##### ----- Remote Servers ----- #####
 
