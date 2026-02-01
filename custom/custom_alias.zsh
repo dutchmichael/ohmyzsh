@@ -53,7 +53,7 @@ alias bcl='brew list --cask'
 alias bin='brew info $1'
 alias bp='brew pin &'
 alias br='brew reinstall $1'
-alias bun='brew uninstall $1 && brew list> ~/dotfiles_macos/brewlist.txt && echo "brew list saved"'
+alias bun='brew uninstall --zap $1 && brew list> ~/dotfiles_macos/brewlist.txt && echo "brew list saved"'
 alias bup='brew unpin &'
 alias bus='brew uses --installed $1'
 alias bcu='brew cleanup &'
@@ -618,9 +618,13 @@ alias etmgp='mate ~/Library/Application\ Support/TextMate/Global.tmProperties'
 # Available commands are:
 #     alias         Generate WP CLI aliases for remote environments
 # alias tc='trellis check && echo "Checking if Trellis requirements are met"'
-#     db            Commands for database management
-#     deploy        Deploys a site to the specified environment
-alias tdd='trellis deploy development'
+# database
+alias tdbg='trellis db open --app=sequel-ace development' 
+alias tdbp='trellis db open --app=sequel-ace production'     
+alias tdbs='trellis db open --app=sequel-ace staging'  
+# management
+# deploy        Deploys a site to the specified environment
+alias tdd='trellis deploy development' 
 alias tdp='trellis deploy production'
 alias tds='trellis deploy staging'
 
