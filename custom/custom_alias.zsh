@@ -532,6 +532,9 @@ alias pmss='sudo pmset repeat shutdown MTWRFSU 22:00:00 wakeorpoweron MTWRFSU 5:
 # Port Check
 alias p5='echo "executing command [ sudo lsof -i tcp:52698 ]" && sudo lsof -i tcp:52698'
 
+##### ----- Prometheue ----- #####
+alias bssp='brew services start prometheus'
+
 # --- Python version redirects ---
 # alias python='opt/homebrew/bin/python3'
 # alias python2=/usr/bin/python
