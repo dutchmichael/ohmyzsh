@@ -228,7 +228,7 @@ git config rebase.autoStash true
 local ret=0
 
 # repository settings
-remote=${"$(git config --local oh-my-zsh.remote)":-origin}
+remote=${"$(git config --local oh-my-zsh.remote)":-upstream}
 branch=${"$(git config --local oh-my-zsh.branch)":-master}
 
 # repository state
