@@ -28,8 +28,8 @@ alias avl='ansible-vault list'
 alias avs='ansible-vault status'    # Show the status of the vault file
 
 # --- Apache commands ---
-alias act='mate apachectl configtest'
-alias eac='mate usr/local/etc/httpd/httpd.conf'
+alias act='nvim apachectl configtest'
+alias eac='nvim usr/local/etc/httpd/httpd.conf'
 
 # --- Application Commands ---
 alias al='ls /Applications > ~/dotfiles_macos/applications.txt && ls /Applications'
@@ -100,9 +100,9 @@ alias c='clear'
 ##### ----- Custom Aliases ----- #####
 alias cdca='cd ~/.oh-my-zsh/custom'
 alias cdzc='cd ~/.oh-my-zsh/custom'
-alias eca='cd ~/.oh-my-zsh/custom && mate --wait ~/.oh-my-zsh/custom/custom_alias.zsh && git add -f ~/.oh-my-zsh/custom/custom_alias.zsh && git commit -m "updated custom aliases" && git push -u origin custom && cd -'
-alias ez='cd ~ && mate -w ~/.zshrc && git add -f ~/.zshrc && git commit -m "updated .zshrc" && push -u origin custom && cd -'
-alias ezp='cd ~ && mate -w ~/.zprofile && git add -f ~/.zprofile && git commit -m "updated .zprofile" && push -u origin custom && cd -'
+alias eca='cd ~/.oh-my-zsh/custom && nvim --wait ~/.oh-my-zsh/custom/custom_alias.zsh && git add -f ~/.oh-my-zsh/custom/custom_alias.zsh && git commit -m "updated custom aliases" && git push -u origin custom && cd -'
+alias ez='cd ~ && nvim -w ~/.zshrc && git add -f ~/.zshrc && git commit -m "updated .zshrc" && push -u origin custom && cd -'
+alias ezp='cd ~ && nvim -w ~/.zprofile && git add -f ~/.zprofile && git commit -m "updated .zprofile" && push -u origin custom && cd -'
 alias mca='more ~/.oh-my-zsh/custom/custom_alias.zsh'
 alias sz='source ~/.zshrc'
 # alias vca='vim ~/.oh-my-zsh/custom/custom_alias.zsh'
@@ -112,7 +112,7 @@ alias sz='source ~/.zshrc'
 alias dssh='ssh -v /usr/bin/ssh'
 
 # DNSmasq configuration command
-alias edc='mate /usr/local/etc/dnsmasq.conf'
+alias edc='nvim /usr/local/etc/dnsmasq.conf'
 # DNS on localhost dnsmasq commands
 # alias # stopdns='sudo launchctl stop homebrew.mxcl.dnsmasq'
 # alias # startdns='sudo launchctl start homebrew.mxcl.dnsmasq'
@@ -155,10 +155,10 @@ alias fnl='print -l ${(ok)functions} && echo"Listed all fuctions by name"'	# Lis
 alias fn='functions $1'	# Show the contents of a function"" 
 
 # EDit extension plist
-alias eep='cp ~/Library/Containers/com.apple.Safari/Data/Library/Safari/AppExtensions/Extensions.plist ~/dotfiles_macos_backup/Extensions.plist.$(date +"%Y%m%d%H%M%S") && mate ~/Library/Containers/com.apple.Safari/Data/Library/Safari/AppExtensions/Extensions.plist'
+alias eep='cp ~/Library/Containers/com.apple.Safari/Data/Library/Safari/AppExtensions/Extensions.plist ~/dotfiles_macos_backup/Extensions.plist.$(date +"%Y%m%d%H%M%S") && nvim ~/Library/Containers/com.apple.Safari/Data/Library/Safari/AppExtensions/Extensions.plist'
 
 # Knowhost configuration command
-alias ekh='mate ~/.ssh/known_hosts'
+alias ekh='nvim ~/.ssh/known_hosts'
 
 ##### ----- Generateme ----- #####
 
@@ -166,8 +166,8 @@ alias ekh='mate ~/.ssh/known_hosts'
 ##### ----- Git ----- #####
 
 # .gitignore
-alias gigg='mate ~/.gitignore_global'
-alias gig='mate .gitignore'
+alias gigg='nvim ~/.gitignore_global'
+alias gig='nvim .gitignore'
 
 # Git Aliases
 alias agg='alias | grep git'
@@ -216,7 +216,7 @@ alias egco='git config -e'
 alias egcog='git config --global -e'
 alias gcoh='git config --help'
 alias gcol='git config --list --show-origin'
-alias egc='cp ~/.gitconfig ~/dotfiles_macos_backup/gitconfig.$(date +"%Y%m%d%H%M%S") && mate ~/.gitconfig'
+alias egc='cp ~/.gitconfig ~/dotfiles_macos_backup/gitconfig.$(date +"%Y%m%d%H%M%S") && nvim ~/.gitconfig'
 
 # git diff
 alias gd='git diff '
@@ -345,7 +345,7 @@ alias ghcp='gh repo create -p -o --remote-name github ' # Create this repository
 #   attestation:   Work with artifact attestations
 #   completion:    Generate shell completion scripts
 #   config:        Manage configuration for gh
-alias ghc='mate ~/.config/gh'
+alias ghc='nvim ~/.config/gh'
 #   extension:     Manage gh extensions
 #   gpg-key:       Manage GPG keys
 #   label:         Manage labels
@@ -441,7 +441,7 @@ alias h='history -f'
 alias hg='history -f | grep $1'
 
 ##### ----- Hosts ----- #####
-alias eh='cp /etc/hosts ~/dotfiles_macos_backup/hosts.$(date +"%Y%m%d%H%M%S") && mate /etc/hosts'
+alias eh='cp /etc/hosts ~/dotfiles_macos_backup/hosts.$(date +"%Y%m%d%H%M%S") && nvim /etc/hosts'
 
 # --- HTTP(S) commands ---
 alias l80='sudo lsof -i :80 | egrep "PID|LISTEN"'
@@ -475,7 +475,7 @@ alias lsh="ls -a | grep '^\.'"
 alias lsl='ls -l'
 
 # --- Log file commands ---
-alias logs='mate /usr/local/var/log .'
+alias logs='nvim /usr/local/var/log .'
 	
 ##### ----- Manual Commands ----- #####
 alias mb='man zshbuiltins'
@@ -504,6 +504,10 @@ alias sdb='sudo /usr/local/mysql/support-files/mysql.server start'
 alias dbv='/usr/local/mysql/bin/mysql -v -uroot -p'
 alias rsa='sudo apachectl restart'
 
+##### ----- Neovim ----- #####
+alias vi='nvim'
+alias vim='nvim'
+
 # --- Nodejs commands ---
 alias nd='echo "Running nodenv-doctor https://github.com/nodenv/nodenv-installer#nodenv-doctor"  && curl -fsSL https://raw.githubusercontent.com/nodenv/nodenv-installer/master/bin/nodenv-doctor | bash'
 
@@ -517,7 +521,7 @@ alias xdoff='xdebug-toggle off'                       # disables xdebug
 alias xdr='xdebug-toggle on|off --no-server-restart'  # toggles xdebug without restarting apache or php-fpm
 
 # PHPmyadmin configuration command
-alias emc='mate /usr/local/etc/phpmyadmin.config.inc.php'
+alias emc='nvim /usr/local/etc/phpmyadmin.config.inc.php'
 
 ##### ----- Ping Commands ----- #####
 alias ping='ping -c 5'
@@ -595,10 +599,10 @@ alias rssh='sudo launchctl unload /System/Library/LaunchDaemons/ssh.plist && sud
 
 ##### ----- SSH configuration commands ---- #####
 alias ss='source ~/.ssh/config'
-alias esc='cd ~/.ssh && mate --wait ~/.ssh/config && git add -f ~/.ssh/config && git commit -m "updated ssh config" && git push -u origin main && cd -'
+alias esc='cd ~/.ssh && nvim --wait ~/.ssh/config && git add -f ~/.ssh/config && git commit -m "updated ssh config" && git push -u origin main && cd -'
 
-# old alias esc='cp ~/.ssh/config ~/.ssh/config.$(date +%y%%d) && mate ~/.ssh/config'
-# alias esc='cp ~/dotfiles_macos/config ~/dotfiles_macos_backup/config.$(date +"%Y%m%d%H%M%S") && mate ~/.ssh/config'
+# old alias esc='cp ~/.ssh/config ~/.ssh/config.$(date +%y%%d) && nvim ~/.ssh/config'
+# alias esc='cp ~/dotfiles_macos/config ~/dotfiles_macos_backup/config.$(date +"%Y%m%d%H%M%S") && nvim ~/.ssh/config'
 
 # --- Synology Router ---
 alias sr='ssh -p4272 root@192.168.1.1'
@@ -659,7 +663,7 @@ alias tps='trellis provision staging'
 # alias cdt='echo "changing to trellis directory" && cd ~/Sites/trellis/midapex.com/trellis/'
 # alias ave='ansible-vault encrypt group_vars/all/vault.yml && ansible-vault encrypt group_vars/development/vault.yml && ansible-vault encrypt group_vars/production/vault.yml && ansible-vault encrypt group_vars/staging/vault.yml'
 # alias avd='ansible-vault decrypt group_vars/all/vault.yml && ansible-vault decrypt group_vars/development/vault.yml && ansible-vault decrypt group_vars/production/vault.yml && ansible-vault decrypt group_vars/staging/vault.yml'
-# alias egv='mate $PWD/trellis/group_vars .'
+# alias egv='nvim $PWD/trellis/group_vars .'
 # ansible-vault encrypt cd ~/Sites/trellis/midapex.com/trellis/group_vars/all/vault.yml group_vars/development/vault.yml group_vars/staging/vault.yml group_vars/production/vault.yml
 # ~/Sites/trellis/midapex.com/trellis/group_vars
 
@@ -667,7 +671,7 @@ alias tps='trellis provision staging'
 # alias cdt='echo "changing to trellis directory" && cd ~/Sites/trellis/midapex.com/trellis/'
 # alias ave='ansible-vault encrypt group_vars/all/vault.yml && ansible-vault encrypt group_vars/development/vault.yml && ansible-vault encrypt group_vars/production/vault.yml && ansible-vault encrypt group_vars/staging/vault.yml'
 # alias avd='ansible-vault decrypt group_vars/all/vault.yml && ansible-vault decrypt group_vars/development/vault.yml && ansible-vault decrypt group_vars/production/vault.yml && ansible-vault decrypt group_vars/staging/vault.yml'
-# alias egv='mate $PWD/group_vars .'
+# alias egv='nvim $PWD/group_vars .'
 # alias cdt='cd ~/Projects/Roots.io/trellis'
 # ansible-vault encrypt cd ~/Sites/trellis/midapex.com/trellis/group_vars/all/vault.yml group_vars/development/vault.yml group_vars/staging/vault.yml group_vars/production/vault.yml
 # ~ /Sites/trellis/midapex.com/trellis/group_vars# Available commands are:
@@ -701,14 +705,11 @@ alias tps='trellis provision staging'
 # xdebug-tunnel    Commands for Xdebug tunnel
 
 # Virtual host commands
-# alias eud='mate /usr/local/etc/httpd/extra/httpd-userdir.conf'
-# alias evh='mate /usr/local/etc/httpd/extra/httpd-vhosts.conf'
+# alias eud='nvim /usr/local/etc/httpd/extra/httpd-userdir.conf'
+# alias evh='nvim /usr/local/etc/httpd/extra/httpd-vhosts.conf'
 # alias svh='source /usr/local/etc/httpd/extra/httpd-vhosts.conf'
 # alias lvh='httpd -D DUMP_INCLUDES'
 # alias tvh='httpd -S'
-
-##### ----- VSCode Commands ----- 
-
 
 # WP-CLI commands
 alias wppl='wp plugin list'
