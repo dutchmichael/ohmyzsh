@@ -2,7 +2,7 @@
 # custom aliases for Oh My ZSH
 # github.com/dutchmichael
 
-##### ----- Version 26.01.19  ----- #####
+##### ----- Version 26.02.08 ----- #####
 
 ##### ----- Actual Server ----- #####
 alias as='actual-server'
@@ -100,9 +100,9 @@ alias c='clear'
 ##### ----- Custom Aliases ----- #####
 alias cdca='cd ~/.oh-my-zsh/custom'
 alias cdzc='cd ~/.oh-my-zsh/custom'
-alias eca='cd ~/.oh-my-zsh/custom && nvim --wait ~/.oh-my-zsh/custom/custom_alias.zsh && git add -f ~/.oh-my-zsh/custom/custom_alias.zsh && git commit -m "updated custom aliases" && git push -u origin custom && cd -'
-alias ez='cd ~ && nvim -w ~/.zshrc && git add -f ~/.zshrc && git commit -m "updated .zshrc" && push -u origin custom && cd -'
-alias ezp='cd ~ && nvim -w ~/.zprofile && git add -f ~/.zprofile && git commit -m "updated .zprofile" && push -u origin custom && cd -'
+alias eca='cd ~/.oh-my-zsh/custom && nvim ~/.oh-my-zsh/custom/custom_alias.zsh && git add -f ~/.oh-my-zsh/custom/custom_alias.zsh && git commit -m "updated custom aliases" && git push -u origin custom && cd -'
+alias ez='cd ~ && nvim ~/.zshrc && git add -f ~/.zshrc && git commit -m "updated .zshrc" && push -u origin custom && cd -'
+alias ezp='cd ~ && nvim ~/.zprofile && git add -f ~/.zprofile && git commit -m "updated .zprofile" && push -u origin custom && cd -'
 alias mca='more ~/.oh-my-zsh/custom/custom_alias.zsh'
 alias sz='source ~/.zshrc'
 # alias vca='vim ~/.oh-my-zsh/custom/custom_alias.zsh'
@@ -505,8 +505,8 @@ alias dbv='/usr/local/mysql/bin/mysql -v -uroot -p'
 alias rsa='sudo apachectl restart'
 
 ##### ----- Neovim ----- #####
-alias vi='nvim'
-alias vim='nvim'
+#alias vi='nvim'
+#alias vim='nvim'
 
 # --- Nodejs commands ---
 alias nd='echo "Running nodenv-doctor https://github.com/nodenv/nodenv-installer#nodenv-doctor"  && curl -fsSL https://raw.githubusercontent.com/nodenv/nodenv-installer/master/bin/nodenv-doctor | bash'
