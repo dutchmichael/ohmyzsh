@@ -124,6 +124,9 @@ alias edc='nvim /usr/local/etc/dnsmasq.conf'
 alias dd='ddgr -n 4'
 alias ddm='man ddgr'
 
+# Edit extension plist
+alias eep='cp ~/Library/Containers/com.apple.Safari/Data/Library/Safari/AppExtensions/Extensions.plist ~/dotfiles_macos_backup/Extensions.plist.$(date +"%Y%m%d%H%M%S") && nvim ~/Library/Containers/com.apple.Safari/Data/Library/Safari/AppExtensions/Extensions.plist'
+
 ##### ----- Find commands ----- #####
 alias ag='alias | grep $1'
 alias ags='alias | grep ssh'
@@ -135,7 +138,6 @@ alias ff="find ~/ -type f -name $1"
 # defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool false %% killall Finder
 #osascript -e 'tell application "System Events" to get the name of every application process whose background only is false'
 #launchctl unload -w ~/Library/LaunchAgents/com.example.app.plist
-
 
 # Flush cache command
 # alias fc='sudo killall -HUP mDNSResponder' // MacOS 10.11+ # flush DNS cache conflicted with builtin fc command MFV 250125
@@ -154,29 +156,29 @@ alias flc='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder && echo 
 alias fnl='print -l ${(ok)functions} && echo"Listed all fuctions by name"'	# List all functions by name
 alias fn='functions $1'	# Show the contents of a function"" 
 
-# EDit extension plist
-alias eep='cp ~/Library/Containers/com.apple.Safari/Data/Library/Safari/AppExtensions/Extensions.plist ~/dotfiles_macos_backup/Extensions.plist.$(date +"%Y%m%d%H%M%S") && nvim ~/Library/Containers/com.apple.Safari/Data/Library/Safari/AppExtensions/Extensions.plist'
 
-# Knowhost configuration command
-alias ekh='nvim ~/.ssh/known_hosts'
+# Known host configuration command
+alias ekh'nvim ~/.ssh/known_hosts'
 
 ##### ----- Generateme ----- #####
 
+#Ghostly
+    alias ghostsc='ghostty +show-config --default --docs'
 
-##### ----- Git ----- #####
+#Git
 
 # .gitignore
-alias gigg='nvim ~/.gitignore_global'
-alias gig='nvim .gitignore'
+    alias gigg='nvim ~/.gitignore_global'
+    alias gig='nvim .gitignore'
 
 # Git Aliases
-alias agg='alias | grep git'
-alias get='git '
-alias gut='git '
-alias got='git '
-alias g='git '
-alias gith='git --help'
-alias gv='git --version'
+    alias agg='alias | grep git'
+    alias get='git '
+    alias gut='git '
+    alias got='git '
+    alias g='git '
+    alias gith='git --help'
+    alias gv='git --version'
 
 # git add
 alias agga='alias | grep "git add"'
@@ -264,7 +266,7 @@ alias gremove='git rm -r '
 #alias grhh='git reset --hard'
 #alias groh='git reset origin/$(git_current_branch) --hard'
 #alias gru='git reset --'
-#alias gunwip='git log -n 1 | grep -q -c "\-\-wip\-\-" && git reset HEAD~1'
+#alias gunwip='git log -n  | grep -q -c "\-\-wip\-\-" && git reset HEAD~1'
 
 # Git SSH [gitssh]
 # alias gitssh="usermod -s /bin/bash git"
