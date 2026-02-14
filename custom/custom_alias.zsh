@@ -613,12 +613,12 @@ alias sr='ssh -p4272 root@192.168.1.1'
 alias sp='system_profiler SPSoftwareDataType'
 
 # --- Textmate Commands ---
-alias agm='alias | grep mate'
+# alias agm='alias | grep mate'
 # alias agrm='alias | grep rmate'
-alias mp='mate .'
-alias etmp='mate ~/.tm_properties'
-alias etmgp='mate ~/Library/Application\ Support/TextMate/Global.tmProperties'
-
+# alias mp='mate .'
+# alias etmp='mate ~/.tm_properties'
+# alias etmgp='mate ~/Library/Application\ Support/TextMate/Global.tmProperties'
+#
 ##### ----- Trellis Commands ----- #####
 # alias cdt='cd ~/Projects/Roots.io/trellis'
 # trellis --help
