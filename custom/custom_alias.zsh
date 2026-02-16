@@ -507,10 +507,11 @@ alias dbv='/usr/local/mysql/bin/mysql -v -uroot -p'
 alias rsa='sudo apachectl restart'
 
 # Neovim
-alias vi='nvim'
-alias vim='nvim'
-alias nv='nvim'
-alias nvc='nvim $XDG_CONFIG_HOME/nvim/init.lua'
+  alias vi='nvim'
+  alias vim='nvim'
+  alias nv='nvim'
+  alias nvc='nvim $XDG_CONFIG_HOME/nvim/init.lua'
+  alias nvl='more /Users/dutchmichael/.local/state/nvim/conform.log'
 
 # --- Nodejs commands ---
 alias nd='echo "Running nodenv-doctor https://github.com/nodenv/nodenv-installer#nodenv-doctor"  && curl -fsSL https://raw.githubusercontent.com/nodenv/nodenv-installer/master/bin/nodenv-doctor | bash'
