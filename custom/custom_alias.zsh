@@ -375,14 +375,8 @@
     #   $ gh issue create
     #   $ gh repo clone cli/cli
     #   $ gh pr checkout 321
-  #
-  # LEARN MORE
-    #   Use `gh <command> <subcommand> --help` for more information about a command.
-    #   Read the manual at https://cli.github.com/manual
-    #   Learn about exit codes using `gh help exit-codes`
-    #   Learn about accessibility experiences using `gh help accessibility`
-
-###### ----- Gitlab ----- #####
+  
+# Gitlab 
 
 # --- glab is an open source GitLab CLI tool that brings GitLab to your command line.       
 #
@@ -433,9 +427,9 @@
 #     -h --help                                 Show help for this command.
 #     -v --version                              Show glab version information
 
-##### ----- Hidden Files ----- #####
-alias shf='defaults write com.apple.finder AppleShowAllFiles YES'
-alias hhf='defaults write com.apple.finder AppleShowAllFiles NO'
+# Hidden Files
+  alias shf='defaults write com.apple.finder AppleShowAllFiles YES'
+  alias hhf='defaults write com.apple.finder AppleShowAllFiles NO'
 
 ##### ----- History Commands ----- #####
 alias h='history -f'
