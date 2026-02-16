@@ -163,8 +163,8 @@ alias ekh'nvim ~/.ssh/known_hosts'
 ##### ----- Generateme ----- #####
 
 #Ghostly
-    alias ghostsc='ghostty +show-config --default --docs'
-    alias ghostc='nvim /Users/dutchmichael/.config/ghostty/config'
+    alias gtsc='ghostty +show-config --default --docs'
+    alias gtc='nvim /Users/dutchmichael/.config/ghostty/config'
 
 #Git
 # .gitignore
