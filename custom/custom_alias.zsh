@@ -164,9 +164,9 @@ alias ekh'nvim ~/.ssh/known_hosts'
 
 #Ghostly
     alias ghostsc='ghostty +show-config --default --docs'
+    alias ghostc='nvim /Users/dutchmichael/.config/ghostty/config'
 
 #Git
-
 # .gitignore
     alias gigg='nvim ~/.gitignore_global'
     alias gig='nvim .gitignore'
