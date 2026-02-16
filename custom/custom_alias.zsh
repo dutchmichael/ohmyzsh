@@ -165,6 +165,7 @@ alias ekh'nvim ~/.ssh/known_hosts'
 #Ghostly
     alias gtsc='ghostty +show-config --default --docs'
     alias gtc='nvim /Users/dutchmichael/.config/ghostty/config'
+    alias gtkbl='ghostty +list-keybinds --default'
 
 #Git
 # .gitignore
