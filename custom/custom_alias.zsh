@@ -59,7 +59,7 @@
   alias bcun='brew cleanup -n &'
   alias cbu='more ~/.scripts/brew_auto_update.log'
 
-  # Brew Services ---
+  # Brew Services 
     alias bsc='brew services cleanup'
     alias bs='brew services'
     alias bsl='brew services list'
@@ -165,12 +165,12 @@
   alias gtc='nvim /Users/dutchmichael/.config/ghostty/config'
   alias gtkbl='ghostty +list-keybinds --default'
 
-#Git
+# Git
   # .gitignore
     alias gigg='nvim ~/.gitignore_global'
     alias gig='nvim .gitignore'
 
-  #Git Aliases
+  # Git Aliases
     alias agg='alias | grep git'
     alias get='git '
     alias gut='git '
@@ -255,7 +255,7 @@
     alias grv='git remote -v'
 
   # Git Remove [gremove]
-    alias gremove='git rm -r '
+    alias gremove='git rm -r' 
 
   # Git Reset [gr]
     #alias aggr='alias | grep "git reset"'
@@ -768,24 +768,22 @@ alias wpta20='wp theme activate twentytwenty'
 alias wumm='echo "Waking up Mac Mini Server" && wakeonlan 40:6C:8F:19:5D:1B'
 
 
+# Kill All Jobs 
 
-# --- Kill All Jobs ---
-
-killjobs () {
+  killjobs () {
 
     local kill_list="$(jobs)"
-    if [ -n "$kill_list" ]; then
+      if [ -n "$kill_list" ]; then
         # this runs the shell builtin kill, not unix kill, otherwise jobspecs cannot be killed
         # the `$@` list must not be quoted to allow one to pass any number parameters into the kill
         # the kill list must not be quoted to allow the shell builtin kill to recognise them as jobspec parameters
         kill $@ $(sed --regexp-extended --quiet 's/\[([[:digit:]]+)\].*/%\1/gp' <<< "$kill_list" | tr '\n' ' ')
-    else
+      else
         return 0
-    fi
+      fi
 
-}
+  }
 
+echo "Custom aliases loaded"
 date
-echo 'Custom aliases loaded'
-
-########## custom_alias.zsh ###########
+EOF
