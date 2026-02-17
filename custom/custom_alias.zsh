@@ -160,10 +160,10 @@
 # Generateme 
   # need to place a random code genrator here
 
-#Ghostly
+# ghosttyy
   alias gtsc='ghostty +show-config --default --docs'
   alias gtc='nvim /Users/dutchmichael/.config/ghostty/config'
-  alias gtkbl='ghostty +list-keybinds --default'
+  alias gtkb='ghostty +list-keybinds --default'
 
 # Git
   # .gitignore
@@ -227,7 +227,7 @@
     alias gi='git init'
     alias gih='git init --help'
 
-  #git pull
+  # git pull
     alias gl='git pull'
     alias glh='giy pull --help'
     alias aggl='alias | grep "git pull"'
