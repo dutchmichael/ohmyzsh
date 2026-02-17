@@ -39,22 +39,22 @@
   alias bv='brew --version'
   alias bu='brew update && brew upgrade'
   alias bd='brew doctor'
-  #alias bdp='brew deps $1 --tree'
-  #lias bds='brew desc --eval-all $1'
+  alias bdp='brew deps --tree '
+  alias bds='brew desc --eval-all '
   alias bo='brew outdated'
   alias bc='brew --cache'
   alias bls='brew list> ~/dotfiles_macos/brewlist.txt && echo "brew list saved"'
-  #alias bcs='echo "searching....." && brew search --cask $1'
-  #alias bi='brew install $1'
+  alias bcs='echo "searching....." && brew search --cask '
+  alias bi='brew install '
   alias blv='brew leaves -r'
   alias bl='brew list'
   alias bcl='brew list --cask'
   alias bin='brew info '
   alias bp='brew pin &'
-  #alias br='brew reinstall $1'
-  #alias bun='brew uninstall --zap $1 && brew list> ~/dotfiles_macos/brewlist.txt && echo "brew list saved"'
+  alias br='brew reinstall '
+  alias bun='brew uninstall --zap '
   alias bup='brew unpin &'
-  #alias bus='brew uses --installed $1'
+  alias bus='brew uses --installed '
   alias bcu='brew cleanup &'
   alias bcun='brew cleanup -n &'
   alias cbu='more ~/.scripts/brew_auto_update.log'
@@ -125,11 +125,11 @@
   alias eep='cp ~/Library/Containers/com.apple.Safari/Data/Library/Safari/AppExtensions/Extensions.plist ~/dotfiles_macos_backup/Extensions.plist.$(date +"%Y%m%d%H%M%S") && nvim ~/Library/Containers/com.apple.Safari/Data/Library/Safari/AppExtensions/Extensions.plist'
 
 # Find commands 
-  #alias ag='alias | grep $1'
+  alias ag='alias | grep '
   alias ags='alias | grep ssh'
-  #alias af='alias | grep $1'
-  #alias fa='alias | grep $1'
-  #alias ff='find ~/ -type f -name $1'
+  alias af='alias | grep '
+  alias fa='alias | grep '
+  alias ff='find ~/ -type f -name '
 
 # Finder Defaults 
   # defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool false %% killall Finder
@@ -151,7 +151,7 @@
 
 # Function Commands 
   alias fnl='print -l ${(ok)functions} && echo"Listed all fuctions by name"'	# List all functions by name
-  #alias fn='functions $1'	# Show the contents of a function"" 
+  alias fn='functions '	# Show the contents of a function"" 
 
 
 # Known host configuration command
@@ -289,7 +289,7 @@
 
   # git add && commit && push [gcp]
     alias gac='ga -A && gc '
-    #alias gcapom='git commit -a -m $1 && git push -u origin main'
+    alias gcapom='git commit -a -m "updated" && git push -u origin main'
 
   # Function gpc (git add push commit)
     gpc() {
@@ -316,9 +316,9 @@
   #   codespace:     Connect to and manage codespaces
   #   gist:          Manage gists
   alias ghgh='gh gist --help'
-  #alias ghglw='gh gist view $1 --web'
-  alias ghgl='echo "listing github gists" && gh gist list'
-  #alias ghgc='gh gist create --copy $1  && echo "created gist on github titled $1"'
+  alias ghglw='gh gist view --web '
+  alias ghngl='echo "listing github gists" && gh gist list'
+  alias ghgc='gh gist create --copy '
   #   issue:         Manage issues
   #   org:           Manage organizations
   #   pr:            Manage pull requests
@@ -431,73 +431,73 @@
   alias shf='defaults write com.apple.finder AppleShowAllFiles YES'
   alias hhf='defaults write com.apple.finder AppleShowAllFiles NO'
 
-##### ----- History Commands ----- #####
-alias h='history -f'
-#alias hg='history -f | grep $1'
+# History Commands
+  alias h='history -f'
+  alias hg='history -f | grep '
 
-##### ----- Hosts ----- #####
-alias eh='cp /etc/hosts ~/dotfiles_macos_backup/hosts.$(date +"%Y%m%d%H%M%S") && nvim /etc/hosts'
+# Hosts 
+  alias eh='cp /etc/hosts ~/dotfiles_macos_backup/hosts.$(date +"%Y%m%d%H%M%S") && nvim /etc/hosts'
 
-# --- HTTP(S) commands ---
-alias l80='sudo lsof -i :80 | egrep "PID|LISTEN"'
-alias ml='nmap 127.0.0.1'
+# HTTP(S) commands 
+  alias l80='sudo lsof -i :80 | egrep "PID|LISTEN"'
+  alias ml='nmap 127.0.0.1'
 
-# --- Interactive shell commands ---
-is() {
-	if [[ -o login ]]
-		then print "The Shell in Login"
-			else
-				print "The Shell is Interactive"
-	fi
-}
+# Interactive shell commands 
+  is() {
+	  if [[ -o login ]]
+		  then print "The Shell in Login"
+			  else
+				  print "The Shell is Interactive"
+	  fi
+  }
 
-# --- IP Address Comanads ----
-alias ip='curl ipecho.net/plain ; echo'
-alias iip='ifconfig | grep inet'
+# IP Address Comanads 
+  alias ip='curl ipecho.net/plain ; echo'
+  alias iip='ifconfig | grep inet'
 
-# --- Jekyll commands --
-alias js='bundle exec jekyll serve --livereload'
+# Jekyll commands 
+  alias js='bundle exec jekyll serve --livereload'
 
 # --- LAN Commands ---
-# arp – address resolution display and control -a displays or deletes all the current ARP entries.
-alias lan='arp -a'
+  # arp – address resolution display and control -a displays or deletes all the current ARP entries.
+  alias lan='arp -a'
 
-##### ----- List commands ----- ##### 
-alias ll='ls -la'
-alias kk='ls -la'
-alias lsa='ls -a'
-alias lsh="ls -a | grep '^\.'"
-alias lsl='ls -l'
+# List Commands
+  alias ll='ls -la'
+  alias kk='ls -la'
+  alias lsa='ls -a'
+  alias lsh="ls -a | grep '^\.'"
+  alias lsl='ls -l'
 
-# --- Log file commands ---
-alias logs='nvim /usr/local/var/log .'
+# Log file commands 
+  alias logs='nvim /usr/local/var/log .'
 	
-##### ----- Manual Commands ----- #####
-alias mb='man zshbuiltins'
-alias usd='open documentation-ubuntu-com-server-en-latest.pdf'
+# Manual Commands
+  alias mb='man zshbuiltins'
+  alias usd='open documentation-ubuntu-com-server-en-latest.pdf'
 
-# --- MariaDB ---
-#alias mysql='mysql -uroot -p[PASSWORD]'
-#alias mariadb='mysql -uroot -p[PASSWORD]'
-#alias restartdb='brew services restart mariadb'
-#alias startdb='brew services start mariadb'
-#alias stopdb='brew services stop mariadb'
+# MariaDB
+  #alias mysql='mysql -uroot -p[PASSWORD]'
+  #alias mariadb='mysql -uroot -p[PASSWORD]'
+  #alias restartdb='brew services restart mariadb'
+  #alias startdb='brew services start mariadb'
+  #alias stopdb='brew services stop mariadb'
 
-# --- Middleman commands ---
-alias ms='middleman server'
+# Middleman commands 
+  alias ms='middleman server'
 
-##### ----- Misc. Commands ----- #####
-alias fuck='sudo $(history -p \!\!)'
-alias shit='sudo $(history -p \!\!)'
+# Misc. Commands 
+  alias fuck='sudo $(history -p \!\!)'
+  alias shit='sudo $(history -p \!\!)'
 
-# --- Move commands ---
-alias move='mv'
+# Move commands
+  alias move='mv'
 
 # MySQL commands
-# Start and stop MySQL
-alias sdb='sudo /usr/local/mysql/support-files/mysql.server start'
-alias dbv='/usr/local/mysql/bin/mysql -v -uroot -p'
-alias rsa='sudo apachectl restart'
+  # Start and stop MySQL
+  alias sdb='sudo /usr/local/mysql/support-files/mysql.server start'
+  alias dbv='/usr/local/mysql/bin/mysql -v -uroot -p'
+  alias rsa='sudo apachectl restart'
 
 # Neovim
   alias vi='nvim'
@@ -506,11 +506,11 @@ alias rsa='sudo apachectl restart'
   alias nvc='nvim $XDG_CONFIG_HOME/nvim/init.lua'
   alias nvl='more /Users/dutchmichael/.local/state/nvim/conform.log'
 
-# --- Nodejs commands ---
-alias nd='echo "Running nodenv-doctor https://github.com/nodenv/nodenv-installer#nodenv-doctor"  && curl -fsSL https://raw.githubusercontent.com/nodenv/nodenv-installer/master/bin/nodenv-doctor | bash'
+# Nodejs commands
+  alias nd='echo "Running nodenv-doctor https://github.com/nodenv/nodenv-installer#nodenv-doctor"  && curl -fsSL https://raw.githubusercontent.com/nodenv/nodenv-installer/master/bin/nodenv-doctor | bash'
 
-##### ----- Oh-my-zsh ----- #####
-alias omzu='omz update'
+# Oh-my-zsh
+  alias omzu='omz update'
 
 # --- PHP Congiguration command ---
 alias xds='xdebug-toggle'                             # outputs the current status
