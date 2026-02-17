@@ -1,7 +1,7 @@
 # ~/.oh-my-zsh/custom/custom_alias.zsh
 # custom aliases for Oh My ZSH
 # github.com/dutchmichael
-# Version 26.02.08 ----- #####
+# Version 26.02.08
 
 #Actual Server
   alias as='actual-server'
@@ -129,7 +129,7 @@
   alias ags='alias | grep ssh'
   alias af='alias | grep $1'
   alias fa='alias | grep $1'
-  alias ff="find ~/ -type f -name $1"
+  alias ff='find ~/ -type f -name $1'
 
 # Finder Defaults 
   # defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool false %% killall Finder
@@ -786,4 +786,3 @@ alias wumm='echo "Waking up Mac Mini Server" && wakeonlan 40:6C:8F:19:5D:1B'
 
 echo "Custom aliases loaded"
 date
-EOF
