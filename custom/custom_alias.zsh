@@ -39,22 +39,22 @@
   alias bv='brew --version'
   alias bu='brew update && brew upgrade'
   alias bd='brew doctor'
-  alias bdp='brew deps $1 --tree'
-  alias bds='brew desc --eval-all $1'
+  #alias bdp='brew deps $1 --tree'
+  #lias bds='brew desc --eval-all $1'
   alias bo='brew outdated'
   alias bc='brew --cache'
   alias bls='brew list> ~/dotfiles_macos/brewlist.txt && echo "brew list saved"'
-  alias bcs='echo "searching....." && brew search --cask $1'
-  alias bi='brew install $1'
+  #alias bcs='echo "searching....." && brew search --cask $1'
+  #alias bi='brew install $1'
   alias blv='brew leaves -r'
   alias bl='brew list'
   alias bcl='brew list --cask'
-  alias bin='brew info $1'
+  #alias bin='brew info $1'
   alias bp='brew pin &'
-  alias br='brew reinstall $1'
-  alias bun='brew uninstall --zap $1 && brew list> ~/dotfiles_macos/brewlist.txt && echo "brew list saved"'
+  #alias br='brew reinstall $1'
+  #alias bun='brew uninstall --zap $1 && brew list> ~/dotfiles_macos/brewlist.txt && echo "brew list saved"'
   alias bup='brew unpin &'
-  alias bus='brew uses --installed $1'
+  #alias bus='brew uses --installed $1'
   alias bcu='brew cleanup &'
   alias bcun='brew cleanup -n &'
   alias cbu='more ~/.scripts/brew_auto_update.log'
@@ -92,7 +92,7 @@
   alias cs='shasum ~/Downloads/*'
 
 # Clear Screen Command 
-  `alias c='clear'
+  alias c='clear'
 
 # Custom Aliases 
   alias cdca='cd ~/.oh-my-zsh/custom'
@@ -125,11 +125,11 @@
   alias eep='cp ~/Library/Containers/com.apple.Safari/Data/Library/Safari/AppExtensions/Extensions.plist ~/dotfiles_macos_backup/Extensions.plist.$(date +"%Y%m%d%H%M%S") && nvim ~/Library/Containers/com.apple.Safari/Data/Library/Safari/AppExtensions/Extensions.plist'
 
 # Find commands 
-  alias ag='alias | grep $1'
+  #alias ag='alias | grep $1'
   alias ags='alias | grep ssh'
-  alias af='alias | grep $1'
-  alias fa='alias | grep $1'
-  alias ff='find ~/ -type f -name $1'
+  #alias af='alias | grep $1'
+  #alias fa='alias | grep $1'
+  #alias ff='find ~/ -type f -name $1'
 
 # Finder Defaults 
   # defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool false %% killall Finder
@@ -151,7 +151,7 @@
 
 # Function Commands 
   alias fnl='print -l ${(ok)functions} && echo"Listed all fuctions by name"'	# List all functions by name
-  alias fn='functions $1'	# Show the contents of a function"" 
+  #alias fn='functions $1'	# Show the contents of a function"" 
 
 
 # Known host configuration command
@@ -289,7 +289,7 @@
 
   # git add && commit && push [gcp]
     alias gac='ga -A && gc '
-    alias gcapom='git commit -a -m $1 && git push -u origin main'
+    #alias gcapom='git commit -a -m $1 && git push -u origin main'
 
   # Function gpc (git add push commit)
     gpc() {
@@ -316,9 +316,9 @@
   #   codespace:     Connect to and manage codespaces
   #   gist:          Manage gists
   alias ghgh='gh gist --help'
-  alias ghglw='gh gist view $1 --web'
+  #alias ghglw='gh gist view $1 --web'
   alias ghgl='echo "listing github gists" && gh gist list'
-  alias ghgc='gh gist create --copy $1  && echo "created gist on github titled $1"'
+  #alias ghgc='gh gist create --copy $1  && echo "created gist on github titled $1"'
   #   issue:         Manage issues
   #   org:           Manage organizations
   #   pr:            Manage pull requests
@@ -433,7 +433,7 @@
 
 ##### ----- History Commands ----- #####
 alias h='history -f'
-alias hg='history -f | grep $1'
+#alias hg='history -f | grep $1'
 
 ##### ----- Hosts ----- #####
 alias eh='cp /etc/hosts ~/dotfiles_macos_backup/hosts.$(date +"%Y%m%d%H%M%S") && nvim /etc/hosts'
@@ -711,7 +711,7 @@ alias tps='trellis provision staging'
 
 # WP-CLI commands
 alias wppl='wp plugin list'
-alias wppu='wp plugin uninstall $1'
+#alias wppu='wp plugin uninstall $1'
 
 # SUBCOMMANDS
 #   cache                 Adds, removes, fetches, and flushes the WP Object Cache object.
