@@ -785,4 +785,4 @@ alias wumm='echo "Waking up Mac Mini Server" && wakeonlan 40:6C:8F:19:5D:1B'
   }
 
 echo "Custom aliases loaded"
-date
+#EOF custom_alias.zsh
