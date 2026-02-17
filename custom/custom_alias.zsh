@@ -49,7 +49,7 @@
   alias blv='brew leaves -r'
   alias bl='brew list'
   alias bcl='brew list --cask'
-  #alias bin='brew info $1'
+  alias bin='brew info '
   alias bp='brew pin &'
   #alias br='brew reinstall $1'
   #alias bun='brew uninstall --zap $1 && brew list> ~/dotfiles_macos/brewlist.txt && echo "brew list saved"'
