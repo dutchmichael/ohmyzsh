@@ -472,6 +472,9 @@
 # Log file commands 
   alias logs='nvim /usr/local/var/log .'
 	
+# Make Directory Commande
+  alias mkdir='mkdir -pv'
+  
 # Manual Commands
   alias mb='man zshbuiltins'
   alias usd='open documentation-ubuntu-com-server-en-latest.pdf'
