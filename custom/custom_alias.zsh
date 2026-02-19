@@ -506,7 +506,7 @@
   alias vi='nvim'
   alias vim='nvim'
   alias nv='nvim'
-  alias nvc='nvim /Users/dutchmcihae/.config/nvim/init.lua'
+  alias nvc='nvim /Users/dutchmichael/.config/nvim/init.lua'
   alias nvl='more /Users/dutchmichael/.local/state/nvim/conform.log'
 
 # Nodejs commands
