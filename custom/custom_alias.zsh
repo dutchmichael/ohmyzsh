@@ -506,7 +506,7 @@
   alias vi='nvim'
   alias vim='nvim'
   alias nv='nvim'
-  alias nvc='nvim $XDG_CONFIG_HOME/nvim/init.lua'
+  alias nvc='nvim /Users/dutchmcihae/.config/nvim/init.lua'
   alias nvl='more /Users/dutchmichael/.local/state/nvim/conform.log'
 
 # Nodejs commands
@@ -551,7 +551,7 @@ alias rp='openssl rand -base64 48'
 
 ##### ----- Remote Servers ----- #####
 
-# Home
+# Servers @ home 
 alias h1='ssh -v dutchmichael@192.168.1.33'
 alias h1r='ssh -v -p4274 -R 52698:localhost:52698 dutchmichael@192.168.1.33'
 
