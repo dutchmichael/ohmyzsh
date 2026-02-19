@@ -516,6 +516,37 @@
 # Oh-my-zsh
   alias omzu='omz update'
 
+# Open Applications
+  alias oa='open -a actual'
+  alias ab='open -a books'
+  alias ac='open -a contacts'
+  alias od='open -a developer'
+  alias oe='open -a microsoft\ edge'
+  alias of='open -a be\ focus\ pro'
+  alias og='open -a gimp'
+  alias oh='open -a hubspot'
+  alias oi='open -a inkscape'
+  alias oj='open -a journal'
+  alias ok='open -a keynote'
+  alias ol='open -a libreoffice'
+  alias om='open -a messenger'
+  alias ome='open -a microsoft\ edge'
+  alias omo='open -a microsoft\ outlook'
+  alias omt='open -a microsoft\ to\ do'
+  alias on='open -a notes'
+  alias oo='open -a obs'
+  alias op='open -a pages'
+  alias oq='open -a podcasts'
+  alias or='open -a reminders'
+  alias os='open -a safari'
+  alias ot='open -a terminal'
+  alias ou='open -a todo'
+  alias ov='open -a vmware\ fusion'
+  alias ow='open -a wordpress'
+  alias ox='open -a xcode'
+  alias oy='open -a jdownloader2'
+  alias oz='open -a numbers'
+  
 # --- PHP Congiguration command ---
 alias xds='xdebug-toggle'                             # outputs the current status
 alias xdon='xdebug-toggle on'                         # enables xdebug
