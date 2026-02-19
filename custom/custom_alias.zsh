@@ -163,6 +163,7 @@
 # ghosttyy
   alias gtsc='ghostty +show-config --default --docs'
   alias gtc='nvim /Users/dutchmichael/.config/ghostty/config'
+  alias gtf='ghostty +list-fonts'
   alias gtkb='ghostty +list-keybinds --default'
 
 # Git
