@@ -125,11 +125,11 @@
   alias eep='cp ~/Library/Containers/com.apple.Safari/Data/Library/Safari/AppExtensions/Extensions.plist ~/dotfiles_macos_backup/Extensions.plist.$(date +"%Y%m%d%H%M%S") && nvim ~/Library/Containers/com.apple.Safari/Data/Library/Safari/AppExtensions/Extensions.plist'
 
 # Find commands 
-  alias ag='alias | grep '
+  alias ag='alias | grep $1'
   alias ags='alias | grep ssh'
-  alias af='alias | grep '
-  alias fa='alias | grep '
-  alias ff='find ~/ -type f -name '
+  alias af='alias | grep $1'
+  alias fa='alias | grep $1'
+  alias ff='find ~/ -type f -name $1'
 
 # Finder Defaults 
   # defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool false %% killall Finder
