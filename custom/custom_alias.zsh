@@ -429,8 +429,8 @@
 #     -v --version                              Show glab version information
 
 # Hidden Files
-  alias shf='defaults write com.apple.finder AppleShowAllFiles YES'
-  alias hhf='defaults write com.apple.finder AppleShowAllFiles NO'
+  alias shf='defaults write com.apple.finder AppleShowAllFiles true && killall Finder'
+  alias hhf='defaults write com.apple.finder AppleShowAllFiles false && killall Finder'
 
 # History Commands
   alias h='history -f'
