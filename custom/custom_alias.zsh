@@ -1,7 +1,6 @@
-# ~/.oh-my-zsh/custom/custom_alias.zsh
+# /Users/dutchmichael/.oh-my-zsh/custom/custom_alias.zsh
 # custom aliases for Oh My ZSH
-# github.com/dutchmichael
-# Version 26.02.08
+# dutchmichael version 26.02.19
 
 #Actual Server
   alias as='actual-server'
@@ -790,4 +789,4 @@ alias wumm='echo "Waking up Mac Mini Server" && wakeonlan 40:6C:8F:19:5D:1B'
   }
 
 echo "Custom aliases loaded"
-#EOF custom_alias.zsh
+##### EOF /Users/dutchmichael/.oh-my-zsh/custom/custom_alias.zsh
