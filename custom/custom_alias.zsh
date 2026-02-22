@@ -562,10 +562,10 @@ alias xdoff='xdebug-toggle off'                       # disables xdebug
 alias xdr='xdebug-toggle on|off --no-server-restart'  # toggles xdebug without restarting apache or php-fpm
 
 # PHPmyadmin configuration command
-alias emc='nvim /usr/local/etc/phpmyadmin.config.inc.php'
+  alias emc='nvim /usr/local/etc/phpmyadmin.config.inc.php'
 
-##### ----- Ping Commands ----- #####
-alias ping='ping -c 5'
+# Ping Commands 
+  alias ping='ping -c 5'
 
 # Power Management MacOS Commands
 alias pmc='sudo pmset repeat cancel'	# Cancels all scheduled system sleep, shutdown, wake, and power on events.
@@ -577,19 +577,24 @@ alias pmss='sudo pmset repeat shutdown MTWRFSU 22:00:00 wakeorpoweron MTWRFSU 5:
 # Port Check
 alias p5='echo "executing command [ sudo lsof -i tcp:52698 ]" && sudo lsof -i tcp:52698'
 
-##### ----- Prometheue ----- #####
-alias bssp='brew services start prometheus'
+# Prometheues 
+  alias bssp='brew services start prometheus'
 
-# --- Python version redirects ---
-# alias python='opt/homebrew/bin/python3'
-# alias python2=/usr/bin/python
-# alias pip='/opt/homebrew/bin/pip3'
-# alias python='python3'
+# Python version redirects 
+  #alias python='opt/homebrew/bin/python3'
+  #alias python2=/usr/bin/python
+  #alias pip='/opt/homebrew/bin/pip3'
+  #alias python='python3'
 
-# ---Random password generator, a DES3 key encoded in base64 using openssl tool (i.e 24 bytes) ---
+# QEMU Commands
+  alias qmah='qemu-system-aarch64 --help'
+  alias qmih='qemu-system-x86_64 --help'
+  
+# Random password generator
+# DES3 key encoded in base64 using openssl tool (i.e 24 bytes) 
 alias rp='openssl rand -base64 48'
 
-##### ----- Remote Servers ----- #####
+# Remote Servers 
 
 # Servers @ home 
 alias h1='ssh -v dutchmichael@192.168.1.33'
@@ -828,4 +833,4 @@ alias wumm='echo "Waking up Mac Mini Server" && wakeonlan 40:6C:8F:19:5D:1B'
   }
 
 echo "Custom aliases loaded"
-##### EOF /Users/dutchmichael/.oh-my-zsh/custom/custom_alias.zsh
+##### EOF /Users/dutchmichael/.oh-my-zsh:/custom/custom_alias.zsh
