@@ -58,14 +58,14 @@
   alias bcun='brew cleanup -n &'
   alias cbu='more ~/.scripts/brew_auto_update.log'
 
-  # Brew Services 
-    alias bsc='brew services cleanup'
-    alias bs='brew services'
-    alias bsl='brew services list'
-    alias bsr='brew services restart --all'
-    alias bsrh='brew services restart httpd'
-    alias bss='brew services stop --all'
-    alias bst='brew services start --all'
+# Brew Services 
+  alias bsc='brew services cleanup'
+  alias bs='brew services'
+  alias bsl='brew services list'
+  alias bsr='brew services restart --all'
+  alias bsrh='brew services restart httpd'
+  alias bss='brew services start --all'
+  alias bsx='brew services stop --all'
 
 # Blue Tooth
   alias bto='system_profiler SPBluetoothDataType'
@@ -151,10 +151,6 @@
 # Function Commands 
   alias fnl='print -l ${(ok)functions} && echo"Listed all fuctions by name"'	# List all functions by name
   alias fn='functions '	# Show the contents of a function"" 
-
-
-# Known host configuration command
-  alias ekh'nvim ~/.ssh/known_hosts'
 
 # Generateme 
   # need to place a random code genrator here
@@ -459,9 +455,19 @@
 # Jekyll commands 
   alias js='bundle exec jekyll serve --livereload'
 
-# --- LAN Commands ---
-  # arp – address resolution display and control -a displays or deletes all the current ARP entries.
+# Known host configuration command
+  alias ekh'nvim ~/.ssh/known_hosts'
+
+# LAN Commands
+# arp – address resolution display and control -a displays or deletes all the current ARP entries.
   alias lan='arp -a'
+
+# Lima Commands
+  alias lcc='limactl create'
+  alias lcl='limactl list'
+  alias lcs='limactl shell'
+  alias lcs='limactl start'
+  alias lcx='limactl stop'
 
 # List Commands
   alias ll='ls -la'
@@ -482,10 +488,10 @@
 
 # MariaDB
   #alias mysql='mysql -uroot -p[PASSWORD]'
-  #alias mariadb='mysql -uroot -p[PASSWORD]'
-  #alias restartdb='brew services restart mariadb'
-  #alias startdb='brew services start mariadb'
-  #alias stopdb='brew services stop mariadb'
+  #alias mdb='mysql -uroot -p[PASSWORD]'
+  #alias mdbr='brew services restart mariadb'
+  #alias mdbs='brew services start mariadb'
+  #alias mdbx='brew services stop mariadb'
 
 # Middleman commands 
   alias ms='middleman server'
