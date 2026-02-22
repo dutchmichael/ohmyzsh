@@ -465,6 +465,7 @@
 # Lima Commands
   alias lc='limactl '
   alias lcc='limactl create'
+  alias lcch0='nvim /Users/dutchmichael/.lima/h0.midapex.net/lima.yaml'
   alias lch='limactl help'
   alias lcl='limactl list'
   alias lcs='limactl shell'
