@@ -469,7 +469,10 @@
   alias lcl='limactl list'
   alias lcs='limactl shell'
   alias lcs='limactl start'
+  alias lcsh0='limactl start h0.midapex.net'
   alias lcx='limactl stop'
+  alias lcxh0='limactl stop h0.midapex.net'
+  alias lcshh0='limactl start h0.midapex.net'
 
 # List Commands
   alias ll='ls -la'
