@@ -463,7 +463,9 @@
   alias lan='arp -a'
 
 # Lima Commands
+  alias lc='limactl '
   alias lcc='limactl create'
+  alias lch='limactl help'
   alias lcl='limactl list'
   alias lcs='limactl shell'
   alias lcs='limactl start'
