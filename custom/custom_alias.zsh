@@ -464,7 +464,7 @@
 
 # Lima Commands
 # example:
-# limactl create --name=h0.midapex.net template:ubuntu-lts
+# limactl create --name=h0.midapex.net --vm-type=qemu --arch=x86_64 --cpus=4 --memory=14 template:ubuntu-lts
 
   alias lc='limactl '
   alias lcc='limactl create'
