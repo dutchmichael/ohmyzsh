@@ -456,7 +456,7 @@
   alias js='bundle exec jekyll serve --livereload'
 
 # Known host configuration command
-  alias ekh'nvim ~/.ssh/known_hosts'
+  alias ekh='nvim ~/.ssh/known_hosts'
 
 # LAN Commands
 # arp – address resolution display and control -a displays or deletes all the current ARP entries.
