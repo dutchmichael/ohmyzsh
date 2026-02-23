@@ -652,7 +652,7 @@ alias rssh='sudo launchctl unload /System/Library/LaunchDaemons/ssh.plist && sud
 
 ##### ----- SSH configuration commands ---- #####
 alias ss='source ~/.ssh/config'
-alias esc='cd ~/.ssh && nvim --wait ~/.ssh/config && git add -f ~/.ssh/config && git commit -m "updated ssh config" && git push -u origin main && cd -'
+alias esc='cd ~/.ssh && nvim ~/.ssh/config && git add -f ~/.ssh/config && git commit -m "updated ssh config" && git push -u origin main && cd -'
 
 # old alias esc='cp ~/.ssh/config ~/.ssh/config.$(date +%y%%d) && nvim ~/.ssh/config'
 # alias esc='cp ~/dotfiles_macos/config ~/dotfiles_macos_backup/config.$(date +"%Y%m%d%H%M%S") && nvim ~/.ssh/config'
