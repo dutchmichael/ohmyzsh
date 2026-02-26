@@ -535,6 +535,8 @@
     alias ntac='notes accounts'
   # Add  
     alias ntah='notes add --help'
+    alias ntah0e='notes add --folder h0.midapex.net --edit'
+    alias gtah0='notes add --folder h0.midapex.net'  
   # Cat  
     alias ntch='notes cat --help' 
   # Config  
@@ -550,7 +552,7 @@
     alias ntla='notes list --account admin@pumc-salisbury.org'
     alias ntld='notes list --account dutchmichael1@gmail.com'
     alias ntli='notes list --account iCloud'
-    alias ntlih0='notes list --account iCloud h0.midapex.net'
+    alias ntlih0='notes list --account iCloud --folder h0.midapex.net'
   # Mkdir - Create a new folder.
     alias ntcfh='notes mkdir --help'
   # Move - Move a note to a different folder. 
