@@ -528,6 +528,34 @@
 # Nodejs commands
   alias nd='echo "Running nodenv-doctor https://github.com/nodenv/nodenv-installer#nodenv-doctor"  && curl -fsSL https://raw.githubusercontent.com/nodenv/nodenv-installer/master/bin/nodenv-doctor | bash'
 
+# Notes
+  alias nth='notes --help'
+  # Notes Commands:
+    # Accounts 
+      alias ntsh='notes accounts --help'
+    # Add  
+      alias ntah='notes add --help'
+    # Cat  
+      alias ntch='notes cat --help' 
+    # Config  
+      alias ntcoh='notes config --help'
+    # Delete  
+      alias ntdth='note delete --help'
+    # Dump
+      alias ntdh='notes dump --help'
+    # Edit
+      alias gteh='notes edit --help' 
+    # List 
+      alias ntlh='notes list --help'
+    # Mkdir     Create a new folder.
+      alias ntdrh='notes mkdir --help'
+    # Move - Move a note to a different folder. 
+      alias ntmh='notes move --help'    
+    # Rename - Rename a note.
+      alias ntrh='notes rename --help' 
+    # Rmdir - Delete a folder.
+      alias ntdfh='notes rmdir --help'
+
 # Oh-my-zsh
   alias omzu='omz update'
 
