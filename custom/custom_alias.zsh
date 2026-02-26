@@ -531,35 +531,45 @@
 # Notes Commands
   alias nth='notes --help'
   # Accounts 
-    alias ntach='notes accounts --help'
     alias ntac='notes accounts'
+    alias ntach='notes accounts --help'
   # Add  
+    alias nta='notes add'
     alias ntah='notes add --help'
     alias ntah0e='notes add --folder h0.midapex.net --edit'
     alias gtah0='notes add --folder h0.midapex.net'  
   # Cat  
+    alias ntc-'notes cat'
     alias ntch='notes cat --help' 
   # Config  
+    alias ntco='notes config' 
     alias ntcoh='notes config --help'
   # Delete  
+    alias ntd='notes delete'
     alias ntdth='note delete --help'
   # Dump
-    alias ntdh='notes dump --help'
+    alias ntdu='notes dump'
+    alias ntduh='notes dump --help'
   # Edit
     alias gteh='notes edit --help' 
   # List 
+    alias ntl='notes list'
     alias ntlh='notes list --help'
     alias ntla='notes list --account admin@pumc-salisbury.org'
     alias ntld='notes list --account dutchmichael1@gmail.com'
     alias ntli='notes list --account iCloud'
-    alias ntlih0='notes list --account iCloud --folder h0.midapex.net'
+    alias ntlh0='notes list h0.midapex.net'
   # Mkdir - Create a new folder.
+    alias ntcf-'notes mkdir'
     alias ntcfh='notes mkdir --help'
   # Move - Move a note to a different folder. 
+    alias ntm-'notes move'
     alias ntmh='notes move --help'    
   # Rename - Rename a note.
+    alias ntr='notes rename'
     alias ntrh='notes rename --help' 
   # Rmdir - Delete a folder.
+    alias btdf='notes rmdir'
     alias ntdfh='notes rmdir --help'
 
 # Oh-my-zsh
