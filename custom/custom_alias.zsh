@@ -601,16 +601,40 @@ alias p5='echo "executing command [ sudo lsof -i tcp:52698 ]" && sudo lsof -i tc
 # DES3 key encoded in base64 using openssl tool (i.e 24 bytes) 
 alias rp='openssl rand -base64 48'
 
+# Reminders 
+  alias todo='remindctl'
+  alias todot='remindctl today'
+  alias tototm='remindctl tomorrow'
+  alias todotw='remindctl week'
+  alias todoo='remindctl overdue'
+  alias todou='remindctl upcoming'
+  alias todoc='remindctl completed'
+  alias todoa='remindctl all'
+  alias todod='remindctl $1
+
+  alias todol='remindctl list'
+  alias todoi='remindctl list Important'
+  alias todoh='echo
+#remindctl list Work --rename Office
+#remindctl list Work --delete
+#remindctl list Projects --create
+
+#remindctl add "Buy milk"
+#remindctl add --title "Call mom" --list Personal --due tomorrow
+#remindctl edit 1 --title "New title" --due 2026-01-04
+#remindctl complete 1 2 3
+#remindctl delete 4A83 --force
+#remindctl status                # permission status
+#remindctl authorize             # request permissions'
+
 # Remote Servers 
-
-# Servers @ home 
-alias h1='ssh -v dutchmichael@192.168.1.33'
-alias h1r='ssh -v -p4274 -R 52698:localhost:52698 dutchmichael@192.168.1.33'
-
-# ServerCheap
-alias s1='ssh -v dutchmichael@s1.midapex.net' # IP 65.75.200.
-alias s1r='ssh -v -p4274 -R 52698:localhost:52698 dutchmichael@s1.midapex.net'
-alias s2='ssh -v -p22 dutchmichael@s1.midapex.net' # IP 65.75.200.74
+  # Servers @ home 
+    alias h1='ssh -v dutchmichael@192.168.1.33'
+    alias h1r='ssh -v -p4274 -R 52698:localhost:52698 dutchmichael@192.168.1.33'
+  # ServerCheap
+    alias s1='ssh -v dutchmichael@s1.midapex.net' # IP 65.75.200.
+    alias s1r='ssh -v -p4274 -R 52698:localhost:52698 dutchmichael@s1.midapex.net'
+    alias s2='ssh -v -p22 dutchmichael@s1.midapex.net' # IP 65.75.200.74
 
 # alias sp1='ssh root@45.79.195.179'
 # alias sp2='ssh dutchmichael@67.205.15.136'
