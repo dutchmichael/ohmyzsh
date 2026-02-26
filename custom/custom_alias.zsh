@@ -610,11 +610,11 @@ alias rp='openssl rand -base64 48'
   alias todou='remindctl upcoming'
   alias todoc='remindctl completed'
   alias todoa='remindctl all'
-  alias todod='remindctl $1
-
-  alias todol='remindctl list'
-  alias todoi='remindctl list Important'
+  alias todod='remindctl $1'
   alias todoh='remindctl --help'
+  alias todol='remindctl list'
+  alias todou='reminderctl list Urgent'
+  alias todoi='remindctl list Important'
 
 # remindctl list Work --rename Office
 # remindctl list Work --delete
