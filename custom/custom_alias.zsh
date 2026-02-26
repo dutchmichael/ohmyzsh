@@ -614,18 +614,19 @@ alias rp='openssl rand -base64 48'
 
   alias todol='remindctl list'
   alias todoi='remindctl list Important'
-  alias todoh='echo 
-remindctl list Work --rename Office
-remindctl list Work --delete
-remindctl list Projects --create
+  alias todoh='remindctl --help'
 
-remindctl add "Buy milk"
-remindctl add --title "Call mom" --list Personal --due tomorrow
-remindctl edit 1 --title "New title" --due 2026-01-04
-remindctl complete 1 2 3
-remindctl delete 4A83 --force
-remindctl status    "permission status"
-remindctl authorize "request permissions"'
+# remindctl list Work --rename Office
+# remindctl list Work --delete
+# remindctl list Projects --create
+
+# remindctl add "Buy milk"
+# remindctl add --title "Call mom" --list Personal --due tomorrow
+# remindctl edit 1 --title "New title" --due 2026-01-04
+# remindctl complete 1 2 3
+# remindctl delete 4A83 --force
+# remindctl status    "permission status"
+# remindctl authorize "request permissions"'
 
 # Remote Servers 
   # Servers @ home 
