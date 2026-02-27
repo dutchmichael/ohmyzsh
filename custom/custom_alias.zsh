@@ -647,30 +647,24 @@ alias rp='openssl rand -base64 48'
 
 # Reminders 
   alias todo='remindctl'
+  alias todoall='remindctl show all' 
+  alias todoa='remindctl add'
+  alias todoah='remindctl add --help'
+  alias todoai='remindctl add --list Important'
+  alias todoau='remindctl add --list Urgent'
   alias todot='remindctl today'
-  alias tototm='remindctl tomorrow'
+  alias todotm='remindctl tomorrow'
   alias todotw='remindctl week'
-  alias todoo='remindctl overdue'
+  alias todoo='remindctl show overdue'
   alias todoup='remindctl upcoming'
-  alias todoc='remindctl completed'
-  alias todoa='remindctl all'
-  alias todod='remindctl $1'
+  alias todox='remindctl completed'
+  alias todddod='remindctl $1'
   alias todoh='remindctl --help'
   alias todol='remindctl list'
-  alias todou='remindctl list Urgent'
-  alias todoi='remindctl list Important'
-
-# remindctl list Work --rename Office
-# remindctl list Work --delete
-# remindctl list Projects --create
-
-# remindctl add "Buy milk"
-# remindctl add --title "Call mom" --list Personal --due tomorrow
-# remindctl edit 1 --title "New title" --due 2026-01-04
-# remindctl complete 1 2 3
-# remindctl delete 4A83 --force
-# remindctl status    "permission status"
-# remindctl authorize "request permissions"'
+  alias todoli='remindctl list Important'
+  alias todolu='remindctl list Urgent'
+  alias todoch='remindclt complete --help'
+  alias todosh='remindctl show --help'
 
 # Remote Servers 
   # Servers @ home 
